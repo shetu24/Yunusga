@@ -1,0 +1,46 @@
+.b-certificates
+    flex none
+    &__header
+        text-align left
+    &__content
+        background-color #f7f6f5
+        overflow hidden
+    &__items {}
+    &__slider
+        padding-top 43px
+        padding-bottom 54px
+        position relative
+        display flex
+        padding-left 40px
+        padding-right 40px
+        .owl-nav
+            .owl-prev,
+            .owl-next
+                position absolute
+                top 50%
+                margin-top -26px
+                
+                .fa 
+                    color #5c524b
+                    font-size 35px !important
+            .owl-prev
+                left 0
+                
+            .owl-next
+                right 0
+        &.owl-carousel
+            .b-certificates
+                &__item
+                    margin 0
+    &__item 
+        display block
+        margin-right 30px
+        flex 0 0 114px
+        max-width 114px
+        padding 0 7px 7px 0
+        img 
+            max-width 100%
+            height auto
+            display block
+            margin 0 auto
+            box-shadow 3px 3px 5px rgba(0,0,0,.3)

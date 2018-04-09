@@ -1,0 +1,220 @@
+<div block="b-catalogue-thumb" mods="{{ thumbMods }}">
+    <div elem="body">
+        <div elem="main">
+            <div elem="meta">
+                <a href="#" elem="image">
+                    <img src="{{ item.image }}" alt="">
+                </a><!-- e:image -->
+
+                <div elem="meta-data">
+                    {% if item.favorite %}
+                    <div elem="favorite">
+                        <a href="#" elem="favorite-add"><icon name="heart" tag="span"> в избраное</a><!-- e:favorite-add -->
+                    </div><!-- e:favorite -->
+                    {% endif %}
+
+                    <div elem="rating">
+                        {% include "rating.html" %}
+                    </div><!-- e:rating -->
+                    {% if item.mocomments != true %}
+                    <div elem="comments-count">20 отзывов</div><!-- e:comments-count -->
+                    {% endif %}
+                </div><!-- e:meta-data -->
+            </div><!-- e:meta -->
+
+            {% if item.hasContentPic %}
+                <div elem="content-pic"><img src="img/catalogue-thumb-detailed.png" alt=""></div><!-- e:content-pic -->
+            {% endif %}
+        
+            <div elem="content">
+                {% if item.title %}
+                <div elem="title" class="h2"><a href="#">{{ item.title }}</a></div><!-- e:title -->
+                {% endif %}
+
+                <div elem="data">
+                    <div elem="data-row">
+                        <div elem="data-item">{{ item.service }}</div><!-- e:data-item -->
+                        {% if item.childs %}
+                            <div elem="data-item" mods="small">2 филиала у компании</div><!-- e:data-item -->
+                        {% endif %}
+                    </div><!-- e:data-row -->
+
+                    <div elem="data-row">
+                        {% if item.experience %}
+                        <div elem="data-item" mods="experience">{{ item.experience }}</div><!-- e:data-item -->
+                        {% endif %}
+                        {% if item.brands %}
+                        <div elem="data-item" mods="brands">
+                            <strong>Бренды:</strong> Vissmann, Vailant, Buderus, ACV, Bosch
+                        </div><!-- e:data-item -->
+                        {% endif %}
+                        <div elem="data-item" mods="price">Выезд  от 1700 руб</div><!-- e:data-item -->
+                    </div><!-- e:data-row -->
+
+                    {% if item.description %}
+                    <div elem="data-row" mods="description">
+                        <div elem="data-item" mods="description">{{ item.description }}</div><!-- e:data-item -->
+                    </div><!-- e:data-row -->
+                    {% endif %}
+
+                    {% if item.phone %}
+                    <div elem="data-row">
+                        <div elem="data-item" mods="phone">{{ item.phone }}</div><!-- e:data-item -->
+                        <div elem="data-item" mods="applied small">{{ item.applied }}</div><!-- e:data-item -->
+                    </div><!-- e:data-row -->
+                    {% endif %}
+                </div><!-- e:data -->
+
+                {% if item.addrBookmarks %}
+                <div elem="address-bookmarks">
+                    <a href="#" elem="address-bookmark" class="active" data-tab-index="0">1 адрес</a>
+                    <a href="#" elem="address-bookmark" data-tab-index="1">2 адрес</a>
+                </div><!-- e:address-bookmarks -->
+                {% endif %}
+            </div><!-- e:content -->
+        </div><!-- e:main -->
+
+        {% set contacts %}
+        <div elem="aside" mods="contacts">
+            <div elem="contact"{% if item.addrBookmarks %} data-tab-index="0" class="active"{% endif %}>
+                <div elem="work-time">Режим работы: пн-пт с 10:00 до 19:00</div><!-- e:work-time -->
+
+                <div elem="callback">
+                    <div elem="callback-title">Оставить заявку на выезд в любом филиале компании.</div><!-- e:callback-title -->
+
+                    <a href="#modal-master" block="b-button">Вызвать мастера</a>
+                </div><!-- e:callback -->
+
+                <div elem="address">
+                    {% for address in item.addresses %}
+                    <div elem="address-item">
+                        {% if address.title %}
+                            <div elem="address-title"><a href="#">{{ address.title }}</a></div> 
+                        {% endif %}
+                        <div elem="address-body">{{ address.body }}</div><!-- e:address-body -->
+                    </div><!-- e:address-item -->
+                    {% endfor %}
+                </div><!-- e:address -->
+            </div><!-- e:contact -->
+            {% if item.addrBookmarks %}
+                <div elem="contact" data-tab-index="1">
+                    <div elem="work-time">Режим работы: пн-пт с 10:00 до 19:00</div><!-- e:work-time -->
+
+                    <div elem="callback">
+                        <div elem="callback-title">Оставить заявку на выезд в любом филиале компании.</div><!-- e:callback-title -->
+
+                        <a href="#modal-master" block="b-button">Вызвать мастера</a>
+                    </div><!-- e:callback -->
+
+                    <div elem="address">
+                        {% for address in item.addresses %}
+                        <div elem="address-item">
+                            {% if address.title %}
+                                <div elem="address-title"><a href="#">{{ address.title }}</a></div> 
+                            {% endif %}
+                            <div elem="address-body">{{ address.body }}</div><!-- e:address-body -->
+                        </div><!-- e:address-item -->
+                        {% endfor %}
+                    </div><!-- e:address -->
+                </div><!-- e:contact -->
+            {% endif %}
+        </div><!-- e:aside -->
+        {% endset %}
+
+        {% if thumbMods != "detailed" %}
+            {% if item.nocontacts != true %}
+                {{ contacts }}
+            {% endif %}
+        {% endif %}
+
+        {% if item.map %}
+            <div id="map-company" elem="aside" mods="map" data-map-points="[{'latLan':[55.737147,37.532834],'balloonContentBody':'Адрес: г Москва, ул Поклонная д 4, м Парк Победы'},{'latLan':[55.0,37.532834],'balloonContentBody':'Адрес: г Москва, ул Поклонная д 4, м Парк Победы'}]">
+                
+            </div><!-- e:aside -->
+        {% endif %}
+        
+    </div><!-- e:body -->
+
+
+    {% if thumbMods == "detailed" %}
+    <div elem="info">
+        <div elem="info-main">
+            <div elem="title" class="h2">{{ item.info.title }}</div><!-- e:title -->
+            <div elem="info-text">{{ item.info.body }}</div><!-- e:info-text -->
+        </div><!-- e:info-main -->
+
+        {{ contacts }}
+    </div><!-- e:info -->
+    {% endif %}
+
+
+    {% if item.childs %}
+    <div elem="childs">
+        <div block="b-catalogue-thumb" mods="child">
+            <div elem="body">
+                <div elem="main">
+                    <div elem="meta">
+                        <div elem="rating">
+                            {% include "rating.html" %}
+                        </div><!-- e:rating -->
+
+                        <div elem="comments-count">20 отзывов</div><!-- e:comments-count -->
+                    </div><!-- e:meta -->
+
+                
+                    <div elem="content">
+                        <div elem="title" class="h2">Филиал в Москве</div><!-- e:title -->
+                    </div><!-- e:content -->
+                </div><!-- e:main -->
+
+
+                <div elem="aside" mods="contacts">
+                    <div elem="work-time">Режим работы: пн-пт с 10:00 до 19:00</div><!-- e:work-time -->
+
+                    <div elem="address">
+                        <div elem="address-body">
+                            ул. Александра Солженицына, д. 5, стр.1. Метро: <span class="i-metro-nowrap"><span class="i-metro i-metro--line_9"></span> Таганская,</span> <span class="i-metro-nowrap"><span class="i-metro i-metro--line_3"></span> Марксистская</span>, <span class="i-metro-nowrap"><span class="i-metro i-metro--line_11"></span> Таганская</span>
+                        </div><!-- e:address-body -->
+                    </div><!-- e:address -->
+                </div><!-- e:contacts -->
+            </div><!-- e:body -->      
+        </div>
+        <div block="b-catalogue-thumb" mods="child">
+            <div elem="body">
+                <div elem="main">
+                    <div elem="meta">
+                        <div elem="rating">
+                            {% include "rating.html" %}
+                        </div><!-- e:rating -->
+
+                        <div elem="comments-count">20 отзывов</div><!-- e:comments-count -->
+                    </div><!-- e:meta -->
+
+                
+                    <div elem="content">
+                        <div elem="title" class="h2">Филиал в Звенигороде   </div><!-- e:title -->
+                    </div><!-- e:content -->
+                </div><!-- e:main -->
+
+
+                <div elem="aside" mods="contacts">
+                    <div elem="work-time">Режим работы: пн-пт с 10:00 до 19:00</div><!-- e:work-time -->
+
+                    <div elem="address">
+                        <div elem="address-body">
+                            ул. Александра Солженицына, д. 5, стр.1. Метро: <span class="i-metro-nowrap"><span class="i-metro i-metro--line_9"></span> Таганская,</span> <span class="i-metro-nowrap"><span class="i-metro i-metro--line_3"></span> Марксистская</span>, <span class="i-metro-nowrap"><span class="i-metro i-metro--line_11"></span> Таганская</span>
+                        </div><!-- e:address-body -->
+                    </div><!-- e:address -->
+                </div><!-- e:contacts -->
+            </div><!-- e:body -->      
+        </div>
+    </div><!-- e:childs -->
+    {% endif %}
+
+    {% if deleteItems %}
+    <div class="b-profile__actions">
+        <a href="#" class="b-profile__action b-profile__action--remove">
+        <img src="img/remove-icon.png" alt="">удалить</a>
+    </div>
+    {% endif %}
+</div><!-- b:b-catalogue-thumb -->

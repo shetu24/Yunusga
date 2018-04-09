@@ -1,0 +1,83 @@
+= yaml =
+pageTitle: Карта сайта
+bodyMods: 'site-map'
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: ''
+asideLeft: false
+asideRight: false
+
+
+layout: !!map
+    header : true
+    footer : true
+    left : false
+    right : false
+
+
+crumbsKey : sitemapPage
+filter : true
+filterChecks : false
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+    
+    <div block="b-section" mods="sitemap">
+        <div block="b-sitemap" class="b-section__container" mix="block:b-container">
+            <div elem="inner">
+                <div class="b-section__header h1">Карта сайта</div>
+    
+                <div elem="content">
+                    <ul elem="site-map">
+                        <li><a href="#">Главная</a>
+                            <ul elem="level2">
+                                <li><a href="#">- Все мастера</a>
+                                    <ul elem="level3">
+                                        <li><a href="#">- Монтажник</a></li>
+                                        <li><a href="#">- Сантехник</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">- Все компании</a>
+                                    <ul elem="level3">
+                                        <li><a href="#">- Монтажная компания</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">- Все услуги</a>
+                                    <ul elem="level3">
+                                        <li><a href="#">- Услуга 1 уровень</a>
+                                            <ul elem="level4">
+                                                <li><a href="#">- Услуга 2 уровень</a>
+                                                    <ul elem="level5">
+                                                        <li><a href="#">- Услуга 3 уровень</a></li>
+                                                    </ul>       
+                                                </li>
+                                            </ul>        
+                                        </li>
+                                        <li><a href="#">- Услуга 1 уровень</a></li>
+                                        <li><a href="#">- Услуга 1 уровень</a>
+                                            <ul elem="level4">
+                                                <li><a href="#">- Услуга 2 уровень</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">- Услуга 1 уровень</a>
+                                            <ul elem="level4">
+                                                <li><a href="#">- Услуга 2 уровень</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">- Услуга 1 уровень</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Список районов</a></li>
+                        <li><a href="#">Список станций метро</a></li>
+                        <li><a href="#">Список улиц</a></li>
+                        <li><a href="#">Справочник ошибок</a></li>
+                    </ul>
+                </div><!-- e:content -->
+            </div>
+        </div>
+    </div>
+{% endblock %}

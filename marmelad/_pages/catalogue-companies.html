@@ -1,0 +1,32 @@
+= yaml =
+pageTitle: Каталог. Компании
+bodyMods: 'catalogue catalogue_companies'
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: ''
+asideLeft: false
+asideRight: false
+
+layout: !!map
+    header : true
+    footer : true
+    left : false
+    right : false
+
+crumbsKey : innerPage
+filter : true
+filterChecks : true
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+    {% set catalogue = companies %}
+    {% include "catalogue.html" %}
+
+    <div block="b-catalogue-after">
+        <div elem="content" mix="block:b-container">
+            {% include "catalogue-menu.html" %}
+        </div><!-- e:content -->
+    </div><!-- b:catalogue-after -->
+{% endblock %}

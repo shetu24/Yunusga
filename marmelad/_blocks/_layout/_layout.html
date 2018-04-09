@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="{{app.lang}}">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="cleartype" content="on">
+
+        <meta name="theme-color" content="{{ app.stylus.theme_color }}">
+
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+        <meta name="format-detection" content="telephone=no">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="msapplication-tap-highlight" content="no">
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <meta name="MobileOptimized" content="320">
+        <meta name="HandheldFriendly" content="True">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+        <title>{{ pageTitle}} - {{ app.package.name | capitalize}} v{{ app.package.version }}</title>
+
+
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/plugins.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        {# <script src="js/vendors/modernizr.js" async></script>
+        <script src="js/vendors/pep-0.4.2.min.js" async></script> #}
+
+    </head>
+
+    <body block="app" mods="{{ bodyMods }}" class="{{ layout | bodyClass(bodyClasses) }}">
+
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <div elem="wrapper" mix="block:{{scrollFixClasses}}">
+            
+            {% if layout.header %}
+                {% include 'app-header.html' %}
+            {% endif %}
+
+
+            {% if layout.sitemap != true %}
+
+                {% if filter %}
+                    {% set filterMods = "catalogue" %}
+                    {% include "filter.html" %}
+                 {% endif %}
+
+                {% if crumbsKey %}
+                    {% include 'crumbs.html' %}
+                {% endif %}
+
+            {% endif %}
+
+            {% if lk %}
+              {% include "lk-menu.html" %}
+            {% endif %}
+
+            
+            <div elem="content" mix="block:{{contentClasses}}">
+
+                <main elem="main">
+                    {% block main %}{% endblock %}
+                </main><!-- e:main -->
+                
+                {% if layout.left %}
+                <aside elem="aside" mods="left">
+                    {% block asideLeft %}{% endblock %}
+                </aside><!-- e:aside m:left -->
+                {% endif %}
+
+                {% if layout.right %}
+                <aside elem="aside" mods="right">
+                    {% block asideRight %}{% endblock %}
+                </aside><!-- e:aside m:right -->
+                {% endif %}
+
+            </div><!-- b:m-content -->
+
+            {% if certificates %}
+            {% include "certificates.html" %}
+            {% endif %}
+            
+            {% if layout.footer %}
+            {% include 'app-footer.html' %}
+            {% endif %}
+
+        </div><!-- b:wrapper -->
+
+        {#% include 'page-scroller.html' %#}
+        <div block="remodal" data-remodal-id="modal">
+              <button data-remodal-action="close" class="remodal-close"></button>
+              <div elem="title">
+                  <h1>Оставить свой вопрос</h1>
+                  <h3>Опишите как можно более подробно свой вопрос</h3>
+              </div>
+              <div elem="inner">
+                  <input elem="input" mods="autocomplete" type="text" placeholder="Ваше имя*">
+                  <input elem="input" mods="autocomplete" type="text" placeholder="Ваш e-mail*">
+                  <textarea elem="textarea" placeholder="Ваш вопрос" type="textarea" value=""></textarea>
+                  <button data-remodal-action="confirm" class="remodal-confirm">Отправить</button>
+              </div>
+        </div>
+        <div block="remodal" data-remodal-id="modal-required-field">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div elem="remodal-block">
+                <div elem="title">
+                  <h1>Оставить свой вопрос</h1>
+                  <h3>Опишите как можно более подробно свой вопрос</h3>
+                </div>
+                <div elem="inner">
+                    <input elem="input" mods="autocomplete" type="text" placeholder="Ваше имя*">
+                    <input elem="input" mods="autocomplete" type="text" placeholder="Ваш e-mail*">
+                    <textarea elem="textarea" placeholder="Ваш вопрос" type="textarea" value=""></textarea>
+                    <div elem="required-field">* Заполните обязательные поля</div>
+                    <button data-remodal-action="confirm" class="remodal-confirm">Отправить</button>
+                </div>
+            </div>
+            <div elem="thank-you-massage"><h1>Спасибо, сообщение отправлено</h1></div>
+        </div>
+        <div block="remodal" data-remodal-id="modal-master">
+              <button data-remodal-action="close" class="remodal-close"></button>
+              <div elem="title" mods="sidewidth margin-bottom">
+                  <h1>Вызвать мастера</h1>
+                  <h3>Услуга: монтаж котла</h3>
+              </div>
+              <div elem="inner" mods="sidewidth">
+                    {% set item = masterpopupDetailed %}
+                    {% include "catalogue-thumb.html" %}
+
+              </div>
+              <div elem="inner">
+                  <div elem="input-wrap">
+                      <input elem="input" mods="autocomplete master date" type="text" placeholder="Выберите дату" id="datetimepicker2">
+                      <input elem="input" mods="autocomplete master time" type="text" placeholder="Удобное время" id="datetimepicker1">
+                  </div>
+                  <input elem="input" mods="autocomplete master name" type="text" placeholder="Ваше имя*">
+                  <input elem="input" mods="autocomplete master tel" type="tel" placeholder="+7 ___ ___-__-__" />
+                  <div elem="number-text">*на указанный вами номер будет отправлено SMS с кодом подтверждения<a elem="hidden" href="#">Отправить еще раз</a></div>
+                  <div elem="user-agreement">Нажимая «Записаться», я принимаю условия <a href="#">пользовательского соглашения, положения о защите персональных данных</a> и даю свое согласие на <a href="#">обработку персональных данных.</a></div>
+                  <div elem="confirm">
+                    <input elem="hidden" type="text" placeholder="Код из SMS">
+                    <button elem="pre-call" class="b-button remodal-confirm">Отправить</button>
+                  </div><!-- e:confirm -->
+              </div>
+        </div>
+
+        <div block="remodal" data-remodal-id="modal-map">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            {% include "modal-map.html" %}
+        </div>
+
+        <div block="remodal" data-remodal-id="modal-sorting">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <form block="b-form" mods="vertical">
+                <div elem="radios">
+                  <div elem="header" class="h4">Сортировать по:</div><!-- e:title -->
+                  <div elem="radio">
+                    <input name="prd" type="radio" id="prd0">
+                    <label for="prd0">Популярности</label>
+                  </div><!-- e:radio -->
+                  <div elem="radio">
+                    <input name="prd" type="radio" id="prd1">
+                    <label for="prd1">Рейтингу</label>
+                  </div><!-- e:radio -->
+                  <div elem="radio">
+                    <input name="prd" type="radio" id="prd2">
+                    <label for="prd2">Отзывам</label>
+                  </div><!-- e:radio -->
+                  <div elem="radio">
+                    <input name="prd" type="radio" id="prd3">
+                    <label for="prd3">Стоимости</label>
+                  </div><!-- e:radio -->
+                </div><!-- e:radios -->
+
+                <div elem="checks">
+                  <div elem="header" class="h4">Фильтр:</div><!-- e:title -->
+                  <div elem="check">
+                    <input name="pch" type="checkbox" id="pch1">
+                    <label for="pch1">Промышленные</label>
+                  </div><!-- e:check -->
+                  <div elem="check">
+                    <input name="pch" type="checkbox" id="pch2">
+                    <label for="pch2">Бытовые</label>
+                  </div><!-- e:check -->
+                  <div elem="check">
+                    <input name="pch" type="checkbox" id="pch3">
+                    <label for="pch3">Работают 24 часа</label>
+                  </div><!-- e:check -->
+                  <div elem="check">
+                    <input name="pch" type="checkbox" id="pch4">
+                    <label for="pch4">Только компании</label>
+                  </div><!-- e:check -->
+                  <div elem="check">
+                    <input name="pch" type="checkbox" id="pch5">
+                    <label for="pch5">Только мастера</label>
+                  </div><!-- e:check -->
+                </div><!-- e:checks -->
+                <div elem="submit">
+                  <button block="b-button">Применить</button>
+                </div><!-- e:submit -->
+            </form><!-- b:block -->
+        </div>
+        {# https://github.com/yunusga/forceFeed
+        https://css-tricks.com/handling-long-unexpected-content-css/ #}
+
+        <script src="js/vendors/jquery-3.2.1.min.js"></script>
+        <script src="bootstrap/js/popper.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU"></script>
+        
+        <script src="js/plugins.min.js"></script>
+        <script src="js/app.js"></script>
+
+        {% if app.GA %}
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','{{ app.GA }}','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+        {% endif %}
+
+    </body><!-- b:w-page -->
+
+</html>

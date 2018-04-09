@@ -1,0 +1,41 @@
+.b-crumbs
+    flex none 
+    color #8e7a6b
+
+    font-size 12px
+    font-weight : $fontWeight.ultra
+    
+    margin-bottom 76px
+    
+    border-top 1px dotted rgba(160,151,144,.6)
+    // border-bottom 1px dotted rgba(160,151,144,.6)
+    
+    .app--about &
+        margin-bottom 0
+        
+    .app--catalogue &
+        margin-bottom 0
+        
+    .app--lk &
+        margin-bottom 0
+        
+    .app--wright &
+        margin-bottom 0
+    
+    @media only screen and (max-width: 900px)
+        margin-bottom 20px
+
+    &__content 
+        padding-top 11px
+        padding-bottom 13px
+
+    &__items 
+        padding-left 46px
+        @media only screen and (max-width: 900px)
+            padding-left 0
+        
+    &__item 
+        color #8e7a6b
+        &:hover
+            color #352f2b
+            text-decortation none

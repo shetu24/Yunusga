@@ -1,0 +1,104 @@
+$system-ui = unquote('-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif')
+
+$elemPrefix = $data.beml.elemPrefix
+$modPrefix = $data.beml.modPrefix
+$modDlmtr = $data.beml.modDlmtr
+
+$colorPrimary = convert($data.theme_color)
+$colorAccent  = #ca433c
+$colorSecondary = #f9f2de
+
+$textDarkColor  = #000
+$textLightColor = #fff
+
+$theme = 'light' // dark
+
+$appGutter = 20px
+$appWidth  = 920px
+
+$controlsHeight = 50px
+$controlsRadius = 3px
+
+$colors = {
+    primary : $colorPrimary,
+    accent  : $colorAccent,
+    bgc     : #fff,
+    txtDark : {
+        primary   : #3c2e25,
+        secondary : #4f3d32,
+        hint      : rgba($textDarkColor, .38),
+        divider   : rgba($textDarkColor, .12)
+    },
+    txtLight : {
+        primary   : rgba($textLightColor, 1),
+        secondary : rgba($textLightColor, .7),
+        hint      : rgba($textLightColor, .5),
+        divider   : rgba($textLightColor, .12)
+    }
+}
+
+$textColor = $colors.txtDark;
+
+$links = {
+    default : #566590,
+    hover   : #566590,
+    active  : false,
+    visited : false
+}
+
+$selection = {
+    bgc   : $colors.primary,
+    color : #fff
+}
+
+$placeholders = {
+    normal : #7c6656,
+    focus  : transparent
+}
+
+$fonts = {
+    base     : "MullerFont"\, sans-serif,
+    headings : "MullerFont"\, sans-serif,
+    helios   : "helios"\, sans-serif
+}
+
+$fontWeight = {
+    thin    : 100,
+    ultra   : 200,
+    light   : 300,
+    regular : 400,
+    medium  : 500,
+    semi    : 600,
+    bold    : 700,
+    black   : 900
+}
+
+$html = {
+    family     : $fonts.base,
+    weight     : 400,
+    color      : $textColor.primary,
+    fontSize   : 16px,
+    lineHeight : 1.25,
+    bgc        : $colors.bgc
+}
+
+$headings = {
+    gutter    : $appGutter,
+    family    : $fonts.headings,
+    weight    : 700,
+    color     : $textColor.secondary,
+    transform : none,
+    size      : 36
+}
+
+$blockquote = {
+    gutter : $appGutter,
+    border : {
+        size  : 5px,
+        color : $colors.primary
+    },
+    font : {
+        size  : base-font-size,
+        style : normal
+    }
+}

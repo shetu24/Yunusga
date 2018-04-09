@@ -1,0 +1,27 @@
+= yaml =
+pageTitle: Подробное описание. Компания
+bodyMods: 'catalogue-card catalogue-card_company'
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: ''
+asideLeft: false
+asideRight: false
+
+layout: !!map
+    header : true
+    footer : true
+    left : false
+    right : false
+
+crumbsKey : innerPage
+filter : false
+certificates: true
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+    {% set item = companyDetailed %}
+    {% set cardMods = "company" %}
+    {% include "catalogue-card.html" %}
+{% endblock %}

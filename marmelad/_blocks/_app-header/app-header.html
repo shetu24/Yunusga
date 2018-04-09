@@ -1,0 +1,37 @@
+<header block="app-header">
+    <div elem="content" mix="block:b-container">
+        <div elem="logo">
+            {% set l_number = "1" %}
+            {% if bodyMods == "home" %}
+                {% set l_number = "3" %}
+            {% endif %}
+
+            {% include "logo.html" %}
+        </div><!-- e:logo -->
+
+        <div elem="region">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            Москва и область
+        </div><!-- e:region -->
+
+        <div elem="phones">
+            <div elem="phones-title">
+                <span class="color-accent">Звоните!</span> Поможем найти мастера
+            </div><!-- e:elem -->
+            <div elem="phone"><a href="tel:88003022006">8 800 302 20 06</a></div><!-- e:phone -->
+
+            {% if lk %}
+                <div elem="lk">
+                    <img src="img/lk-icon.png" alt="">
+                    <a href="#">Перейти в  личный кабинет</a> / <a href="#">Выйти</a>
+                </div><!-- e:lk -->
+            {% endif %}
+        </div><!-- e:phone -->
+
+        {% if filterChecks %}
+        <div elem="sorting-icon">
+            <i class="fa fa-sliders" aria-hidden="true"></i>
+        </div><!-- e:sorting-icon -->
+        {% endif %}
+    </div>
+</header><!-- b:app-header -->

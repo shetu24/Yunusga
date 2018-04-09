@@ -1,0 +1,46 @@
+<footer block="app-footer">
+    <div elem="content" mix="block:b-container">
+        <div elem="menu">
+            {% for item in footerMenu %}
+            <ul>
+                <li>
+                    <a href="{{ item.url }}">{{ item.title }}</a>
+
+                    {% if item.subItems %}
+                        <ul>
+                    {% endif %}
+
+                    {% for subItem in item.subItems %}
+                        <li><a href="{{ subItem.url }}">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            {{ subItem.title }}
+                        </a></li>
+                    {% endfor %}
+
+                    {% if item.subItems %}
+                        </ul>
+                    {% endif %}
+                </li>
+            </ul>
+            {% endfor %}
+        </div><!-- e:menu -->
+
+        <div elem="address">
+            <div elem="logo">
+                {% set l_number = "2" %}
+                {% include "logo.html" %}
+            </div><!-- e:logo -->
+
+            <div elem="contacts">
+                <p>Пишите нам: <a href="mailto:info@gazprosto.ru">info@gazprosto.ru</a></p>
+                <p>Звоните нам: <a href="tel:88003022006">8 800 302 20 06</a></p>
+                <p>© GazProsto.RU 2018</p>
+            </div><!-- e:elem -->
+
+            <div elem="socials">
+                {% set socItems = footerSocials %}
+                {% include "socials.html" %}
+            </div><!-- e:socials -->
+        </div><!-- e:address -->
+    </div><!-- e:content -->
+</footer><!-- b:app-footer -->

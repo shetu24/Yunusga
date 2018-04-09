@@ -1,0 +1,26 @@
+= yaml =
+pageTitle: Подробное описание. Мастер
+bodyMods: 'catalogue-card catalogue-card_master'
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: ''
+asideLeft: false
+asideRight: false
+
+layout: !!map
+    header : true
+    footer : true
+    left : false
+    right : false
+
+crumbsKey : innerPage
+filter : false
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+    {% set item = masterDetailed %}
+    {% set cardMods = "master" %}
+    {% include "catalogue-card.html" %}
+{% endblock %}

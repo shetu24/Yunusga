@@ -1,0 +1,26 @@
+<div block="b-catalogue">
+    <div elem="content" mix="block:b-container">
+        <h1 elem="header">{{ catalogue.h1 }}</h1><!-- e:header -->
+      
+        {% if catalogue.textBefore %}  
+            <div elem="text" mods="before">{{ catalogue.textBefore }}</div><!-- e:text -->
+        {% endif %}
+
+        {% if catalogue.map %}
+            <div elem="map">
+                <img src="img/catalogue-map.png" alt="">
+                <a href="#" elem="map-title">Смотреть на карте города</a><!-- e:image-title -->
+            </div><!-- e:map -->
+        {% endif %}
+
+        {% if catalogue.sorting %}
+            {% include "sorting.html" %}
+        {% endif %}
+        
+        {% if catalogue.list %}
+            {% include "catalogue-list.html" %}
+        {% endif %}
+
+        {% include "pager.html" %}
+    </div><!-- e:content -->
+</div><!-- b:b-catalogue -->

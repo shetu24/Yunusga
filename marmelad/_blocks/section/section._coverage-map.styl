@@ -1,0 +1,80 @@
+
+.b-section
+    &--coverage-map
+        background url(../img/russia-map.png) center bottom no-repeat
+        
+        .b-section__hedaer
+            margin-bottom 0
+
+.b-coverage-map 
+    
+    &__inner
+        padding 53px 0
+        
+        @media only screen and (max-width: 767px)
+            padding 40px 0
+        
+    &__colls
+        padding 40px 0
+        margin-left -90px
+        display flex
+        justify-content center
+        
+        @media only screen and (max-width: 870px)
+            margin-left -50px
+        @media only screen and (max-width: 767px)
+            margin-left -15px
+            
+        @media only screen and (max-width: 597px)
+            display block
+            text-align center
+            padding-bottom 0
+
+            
+        // @media only screen and (max-width: 767px)
+        //     display block
+
+    &__coll
+        display flex
+        flex 0 0 290px
+        max-width 290px
+        
+        padding-left 90px
+        
+        font-size 16px
+        color #3c2e25
+        
+        @media only screen and (max-width: 870px)
+            flex 0 0 250px
+            max-width 250px
+            padding-left 50px
+
+        @media only screen and (max-width: 767px)
+            flex 0 0 33.33%
+            max-width 33.33%
+            padding-left 15px
+            
+        @media only screen and (max-width: 597px)
+            display block
+            flex none 
+            max-width none
+            
+    &__coll ~ &__coll
+        @media only screen and (max-width: 597px)
+            margin-top 4px
+
+    &__icon
+        flex-shrink 0
+        font-size 0
+        line-height 0
+        text-align center
+        margin-right 25px
+        @media only screen and (max-width: 767px)
+            display none
+        img 
+            max-width 100%
+            heigh auto
+            
+    &__item ~ &__item
+        margin-top 4px
+        

@@ -1,0 +1,52 @@
+.b-section
+    &__slogan
+        text-align center
+        color #fff 
+        font-weight: $fontWeight.bold
+        line-height 45px
+        font-size 40px
+        margin-bottom 56px
+        padding-left 20px
+        padding-right 20px
+        
+        @media only screen and (max-width: 767px)
+            font-size 25px
+            line-height 30px
+            margin-bottom 30px
+
+    &__filter
+        margin-bottom 78px
+        @media only screen and (max-width: 767px)
+            margin-bottom 30px
+
+    &--intro
+        padding 235px 0 95px
+        background url(../img/hero-banner1.png) center top no-repeat
+        background-size cover
+        position relative
+        min-height 100vh
+        @media only screen and (max-width: 767px)
+            padding-top 215px
+            
+        
+        .b-section__accent
+            display inline-block
+            position relative
+            &:before
+                content ''
+                position absolute
+                pointer-events none
+                left 7px
+                top 34px
+                width 258px
+                height 25px
+                background url(../img/hero-accent-bg.png) center center no-repeat
+                @media only screen and (max-width: 767px)
+                    top 16px
+                    width 171px
+                    background-size 100% auto
+                
+                
+        .b-section__accent-text
+            position relative
+        

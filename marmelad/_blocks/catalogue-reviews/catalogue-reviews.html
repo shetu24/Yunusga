@@ -1,0 +1,188 @@
+<div block="b-catalogue-reviews" mods="{{ reviewsMods }}">
+    {% if reviewsMods == "detailed" %}
+    <div elem="header" class="h2">Проверенные отзывы</div><!-- e:header -->
+    {% else %}
+    <div elem="header" class="h2">Услуга или категория последние отзывы</div><!-- e:header -->
+    {% endif %}
+
+    {% if reviewsMods == "detailed" %}
+        <div elem="columns">
+            <div elem="main">
+    {% endif %}
+
+    {% if reviewsMods == "detailed" %}
+        {% set thumbMods = "catalogue-review catalogue-review_detailed" %}
+    {% else %}
+        {% set thumbMods = "catalogue-review" %}
+    {% endif %}
+
+    <div elem="items">
+        <div elem="item">
+            <div block="b-catalogue-thumb" mods="{{ thumbMods }}">
+                <div elem="body">
+                    <div elem="main">
+                        <div elem="meta">
+                            {% if reviewsMods == "detailed" %}
+                                <div elem="rating">
+                                    {% include "rating.html" %}
+                                </div><!-- e:rating -->
+                            {% else %}
+                                <div elem="image">
+                                    <img src="img/catalogue-thumb-pic1.png" alt="">
+                                </div><!-- e:image -->
+                            {% endif %}
+                        </div><!-- e:meta -->
+                    
+                        <div elem="content">
+                            {% if reviewsMods != "detailed" %}
+                            <div elem="title" class="h2">Капустин Игнат Максимович  <span elem="title-small">93 отзыва</span></div><!-- e:title -->
+                            {% endif %}
+
+                            <div elem="data">
+                                <div elem="data-item" mods="review">Внимательная, общительная и аккуратная врач, деликатно обращается с детьми, даже старшего возраста.</div>
+
+                                {% if reviewsMods != "detailed" %}
+                                <div elem="data-item" mods="reviewer-name">- Максим Игнатьевич , 12 февраля 2018</div><!-- e:data-item -->
+                                {% else %}
+                                <div elem="data-item" mods="moderation">На модерации, 12 февраля 2018, мастер: Гончар Виктор Николаевич</div><!-- e:data-item -->
+                                {% endif %}
+                            
+                            </div><!-- e:data -->
+                        </div><!-- e:content -->
+                    </div><!-- e:main -->
+                </div><!-- e:body -->
+            </div><!-- b:b-catalogue-thumb -->
+        </div><!-- e:item -->
+
+        <div elem="item">
+            <div block="b-catalogue-thumb" mods="{{ thumbMods }}">
+                <div elem="body">
+                    <div elem="main">
+                        <div elem="meta">
+                            {% if reviewsMods == "detailed" %}
+                                <div elem="rating">
+                                    {% include "rating.html" %}
+                                </div><!-- e:rating -->
+                            {% else %}
+                                <div elem="image">
+                                    <img src="img/catalogue-thumb-pic1.png" alt="">
+                                </div><!-- e:image -->
+                            {% endif %}
+                        </div><!-- e:meta -->
+                    
+                        <div elem="content">
+                            {% if reviewsMods != "detailed" %}
+                            <div elem="title" class="h2">Капустин Игнат Максимович  <span elem="title-small">93 отзыва</span></div><!-- e:title -->
+                            {% endif %}
+
+                            <div elem="data">
+                                <div elem="data-item" mods="review">Внимательная, общительная и аккуратная врач, деликатно обращается с детьми, даже старшего возраста.</div>
+
+                                {% if reviewsMods != "detailed" %}
+                                <div elem="data-item" mods="reviewer-name">- Максим Игнатьевич , 12 февраля 2018</div><!-- e:data-item -->
+                                {% else %}
+                                <div elem="data-item" mods="moderation">На модерации, 12 февраля 2018, мастер: Гончар Виктор Николаевич</div><!-- e:data-item -->
+                                {% endif %}
+                            
+                            </div><!-- e:data -->
+
+                        </div><!-- e:content -->
+                    </div><!-- e:main -->
+                </div><!-- e:body -->
+            </div><!-- b:b-catalogue-thumb -->
+        </div><!-- e:item -->
+    </div><!-- e:items -->
+
+    <div elem="items" mods="hidden">
+        <div elem="item">
+            <div block="b-catalogue-thumb" mods="{{ thumbMods }}">
+                <div elem="body">
+                    <div elem="main">
+                        <div elem="meta">
+                            {% if reviewsMods == "detailed" %}
+                                <div elem="rating">
+                                    {% include "rating.html" %}
+                                </div><!-- e:rating -->
+                            {% else %}
+                                <div elem="image">
+                                    <img src="img/catalogue-thumb-pic1.png" alt="">
+                                </div><!-- e:image -->
+                            {% endif %}
+                        </div><!-- e:meta -->
+                    
+                        <div elem="content">
+
+                            {% if reviewsMods != "detailed" %}
+                            <div elem="title" class="h2">Капустин Игнат Максимович  <span elem="title-small">93 отзыва</span></div><!-- e:title -->
+                            {% endif %}
+
+                            <div elem="data">
+                                <div elem="data-item" mods="review">Внимательная, общительная и аккуратная врач, деликатно обращается с детьми, даже старшего возраста.</div>
+
+                                {% if reviewsMods != "detailed" %}
+                                <div elem="data-item" mods="reviewer-name">- Максим Игнатьевич , 12 февраля 2018</div><!-- e:data-item -->
+                                {% else %}
+                                <div elem="data-item" mods="moderation">На модерации, 12 февраля 2018, мастер: Гончар Виктор Николаевич</div><!-- e:data-item -->
+                                {% endif %}
+                            
+                            </div><!-- e:data -->
+                        </div><!-- e:content -->
+                    </div><!-- e:main -->
+                </div><!-- e:body -->
+            </div><!-- b:b-catalogue-thumb -->
+        </div><!-- e:item -->
+
+        <div elem="item">
+            <div block="b-catalogue-thumb" mods="{{ thumbMods }}">
+                <div elem="body">
+                    <div elem="main">
+                        <div elem="meta">
+                            {% if reviewsMods == "detailed" %}
+                                <div elem="rating">
+                                    {% include "rating.html" %}
+                                </div><!-- e:rating -->
+                            {% else %}
+                                <div elem="image">
+                                    <img src="img/catalogue-thumb-pic1.png" alt="">
+                                </div><!-- e:image -->
+                            {% endif %}
+                        </div><!-- e:meta -->
+                    
+                        <div elem="content">
+                            {% if reviewsMods != "detailed" %}
+                            <div elem="title" class="h2">Капустин Игнат Максимович  <span elem="title-small">93 отзыва</span></div><!-- e:title -->
+                            {% endif %}
+
+                            <div elem="data">
+                                <div elem="data-item" mods="review">Внимательная, общительная и аккуратная врач, деликатно обращается с детьми, даже старшего возраста.</div>
+
+                                {% if reviewsMods != "detailed" %}
+                                <div elem="data-item" mods="reviewer-name">- Максим Игнатьевич , 12 февраля 2018</div><!-- e:data-item -->
+                                {% else %}
+                                <div elem="data-item" mods="moderation">На модерации, 12 февраля 2018, мастер: Гончар Виктор Николаевич</div><!-- e:data-item -->
+                                {% endif %}
+                            
+                            </div><!-- e:data -->
+                        </div><!-- e:content -->
+                    </div><!-- e:main -->
+                </div><!-- e:body -->
+            </div><!-- b:b-catalogue-thumb -->
+        </div><!-- e:item -->
+    </div><!-- e:items -->
+
+    <div elem="more">
+        <a href="#" data-show="открыть больше" data-hide="свернуть"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+    </div><!-- e:more -->
+
+    {% if reviewsMods == "detailed" %}
+            </div><!-- e:main -->
+
+            <div elem="aside">
+                <div elem="header" class="h2">Как мы собираем отзывы</div><!-- e:header -->
+
+                <div elem="text">Вы можете оставить отзыв на ГазПросто только в том случае, если пользуетесь услугами мастера, вызвав его через наш портал. Каждый отзыв проходит тщательную проверку и это позволяет нам исключить появление рекламных или заказных отзывов.<br>ГазПросто не публикует отзывы, которые содержат оскорбления и ненормативную лексику.</div><!-- e: -->
+            </div><!-- e:aside -->
+        </div><!-- e:columns -->
+    {% endif %}    
+    
+</div><!-- b:b-catalogue-reviews -->

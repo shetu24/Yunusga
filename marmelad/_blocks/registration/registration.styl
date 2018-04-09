@@ -1,0 +1,191 @@
+.b-registration
+    &__text
+        text-align center
+        line-height 24px
+        margin-bottom 32px
+    &__columns
+        display flex
+        width 1009px
+        max-width 100%
+        
+        margin 0 auto
+        padding 0 0 0 74px
+        
+        background url(../img/registration-top-bg.png) center top no-repeat, url(../img/registration-bottom-bg.png) center bottom no-repeat, url(../img/registration-middle-bg.png) center top repeat-y
+        background-color #f4f6f7
+        
+        @media only screen and (max-width: 1010px)
+            background-image none !important
+            border 2px solid #41494c
+            width auto
+            max-width 100
+            margin-left 20px
+            margin-right 20px
+            padding-left 0
+            
+        @media only screen and (max-width: 950px)
+            display block
+
+        
+        .b-registration__header
+            text-align left
+        
+    &__aside
+        flex 0 0 350px
+        max-width 350px
+        margin-right 41px
+        padding-top 90px
+        padding-bottom 28px
+        @media only screen and (max-width: 1010px)
+            padding 30px 25px
+            margin-right 0
+        @media only screen and (max-width: 950px)
+            max-width none
+            
+            .g-recaptcha
+                text-align center
+                >div
+                    margin-left auto
+                    margin-right auto
+        
+        .b-registration__header
+            margin-bottom 22px
+    &__main
+        flex 1
+        padding 16px 58px 20px 65px
+        @media only screen and (max-width: 1010px)
+            padding-left 25px
+            padding-right 25px
+    &__captcha{}
+    
+    &__logo
+        text-align center
+        padding-right 66px
+        margin-bottom 48px
+        @media only screen and (max-width: 1010px)
+            padding 0
+            border-bottom 1px dashed #41494c
+            margin-bottom 25px
+            padding-bottom 15px
+        
+    &__tabs
+        .b-registration__header
+            margin-bottom 27px
+        
+    &__tabs-bodys
+        color #fff
+        margin-right 59px
+        border 3px solid #496771
+        box-shadow -6px 5px 21px rgba(255, 255, 255, 0.81), inset -4px 3px 8px rgba(0, 0, 0, 0.3)
+        background-color #728991
+        @media only screen and (max-width: 1010px)
+            margin-right 0
+        
+    &__tab-body
+        display none
+        line-height 19px
+        padding 32px 47px 35px 47px
+        
+        
+        @media only screen and (max-width: 590px)
+            padding 25px 20px
+
+        p:first-child
+            margin-top 0
+        p:last-child
+            margin-bottom 0
+
+        &.active
+            display block
+
+    &__tab-body-title
+        font-size 14px
+        font-weight: $fontWeight.bold
+        margin-bottom 30px
+        
+        @media only screen and (max-width: 590px)
+            margin-bottom 20px
+
+    &__tabs-title
+        font-size 14px
+        font-weight: $fontWeight.bold
+        position absolute
+        left 0
+        top 0
+        color #3c2e25
+        text-decoration none
+        @media only screen and (max-width: 590px)
+            font-size 18px
+            line-height 1
+            text-align center
+        &:hover
+            color #3c2e25
+            text-decoration none
+
+        &--0 
+            top 39px
+            left -36px
+            padding-bottom 23px
+            @media only screen and (max-width: 590px)
+                top 18px
+                left -10px
+                width 91px
+        &--1 
+            top -41px
+            left 124px
+            padding-bottom 23px
+            @media only screen and (max-width: 590px)
+                left 61px
+                width 185px
+            
+        &--2 
+            top 38px
+            left 239px
+            width 156px
+            padding-bottom 23px
+            
+            @media only screen and (max-width: 590px)
+                left 214px
+                top 21px
+                width 115px
+
+    &__tabs-titles
+        height 207px
+        width 307px
+        position relative
+        margin 96px 0 0 27px
+        background url(../img/patenciometr.png) center center no-repeat
+        @media only screen and (max-width: 1010px)
+            margin 70px auto 0
+        @media only screen and (max-width: 590px)
+            transform scale(0.7)
+            transform-origin center top
+            margin-bottom -40px
+            
+        @media only screen and (max-width: 396px)
+            transform-origin left top
+            margin-left 12%
+        @media only screen and (max-width: 364px)
+            margin-left 5%
+        @media only screen and (max-width: 360px)
+            margin-left 0
+            margin-top 45px
+        
+    &__tabs-pointer
+        position absolute
+        height 107px
+        width 107px
+        left 103px
+        top 80px
+        border-radius 107px
+        transition transform .3s
+        transform rotate(0)
+        background url(../img/patenciometr-pointer.png) center center no-repeat
+        
+        &--pos0
+            transform rotate(-122deg)
+        &--pos1
+            transform rotate(-66deg)
+            
+        &--pos2
+            transform rotate(0)

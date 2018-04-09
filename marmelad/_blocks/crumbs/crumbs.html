@@ -1,0 +1,15 @@
+{% set crumbs = crumbs[crumbsKey] %}
+
+<div block="b-crumbs" {% if layout.contacts == true %}class="contacts-page-margin"{% endif %}>
+    <div elem="content" mix="block:b-container">
+        <div elem="items">
+            {% for item in crumbs %}
+                {% if loop.last != true %}
+                    <a href="{{ item.url }}" elem="item" mods="home">{{ item.title }}</a><!-- e:item -->
+                    <span elem="item" mods="divider">/</span><!-- e:elem -->
+                {% endif %}
+            {% endfor %}
+            {{ crumbs[crumbs | length - 1].title }}
+        </div><!-- e:items -->
+    </div><!-- e:content -->
+</div><!-- b:b-crumbs -->

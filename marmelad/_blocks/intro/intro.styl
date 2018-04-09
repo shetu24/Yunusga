@@ -1,0 +1,60 @@
+.b-intro
+    position absolute
+    left 50%
+    bottom 60px
+
+    display block
+    width 130px
+    justify-content center
+    margin-left -65px
+
+    color #fef7ef
+    font : 400 10px  "Arial Narrow", $fonts.helios
+    line-height 12px
+    
+    letter-spacing 0.25px
+    
+    text-transform uppercase
+    text-align center
+    
+    pointer-events none
+    
+   
+    &__text
+        display block
+        margin 5px 0 0
+        position relative
+        &:after
+            content ''
+            display block
+            margin 10px auto 0
+            height 4px
+            width 4px
+            border-radius 4px
+            background #fef7ef
+            
+        
+    .fa 
+        font-size 17px
+        position absolute
+        bottom -43px
+        left 0
+        width 100%
+        text-align center
+        animation: 2s arrow-bounce infinite ease;
+        
+    
+    &:hover
+        color #fff
+        text-decoration none
+        opacity .85
+        
+@keyframes arrow-bounce {
+  0%,
+  100% {
+    bottom: -43px;
+  }
+  50% {
+    bottom: -19px;
+  }
+}

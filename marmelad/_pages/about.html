@@ -1,0 +1,26 @@
+= yaml =
+pageTitle: О нас
+bodyMods: about
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: ''
+asideLeft: false
+asideRight: false
+
+layout: !!map
+    header : true
+    footer : true
+    left : false
+    right : false
+
+crumbsKey : aboutPage
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+    {% include "section._about.html" %}
+    {% include "section._about-benefits.html" %}
+    {% include "section._text.html" %}
+    {% include "section._coverage-map.html" %}
+{% endblock %}

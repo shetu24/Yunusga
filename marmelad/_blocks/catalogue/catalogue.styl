@@ -1,0 +1,55 @@
+.b-catalogue
+    padding-bottom 83px
+    padding-top 26px
+    background-color #f9f9f9
+    @media only screen and (max-width: 767px)
+        padding-bottom 40px
+    &__content{}
+    &__header
+        margin-bottom 13px
+    &__text
+        margin-bottom 40px
+        @media only screen and (max-width: 767px)
+            margin-bottom 20px
+        p:first-child
+            margin-top 0
+        p:last-child
+            margin-bottom 0
+    &__map
+        cursor pointer
+        position relative
+        @media only screen and (max-width: 767px)    
+            margin-bottom 20px
+        @media only screen and (max-width: 590px)    
+            text-align center
+        img 
+            max-width 100%
+            height auto
+            @media only screen and (max-width: 590px)
+                display none
+    &__map-title
+        position absolute
+        left 0
+        bottom 0
+        background-color #ab9f9a
+        color #fff
+        width 273px
+        height 27px 
+        line-height 27px
+        padding 0 18px
+        &:hover
+            color #fff
+            text-decoration none
+        @media only screen and (max-width: 590px)
+            position static
+            height 40px
+            line-height 40px
+            border-radius 3px
+            text-align center
+            width auto 
+            display inline-block
+            text-transform uppercase
+            font-size 14px
+            letter-spacing 0.35px
+            font-weight: $fontWeight.bold
+            

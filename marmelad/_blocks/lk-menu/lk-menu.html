@@ -1,0 +1,9 @@
+<div block="b-lk-menu">
+    <div elem="content" mix="block:b-container">
+        <div elem="items">
+            {% for item in lkMenu %}
+                <a{% if loop.index == lkMenuActiveIndex %} class="active"{% endif %} href="{{ item.url }}" elem="item">{{ item.title }}</a><!-- e:item -->
+            {% endfor %}
+        </div><!-- e:items -->
+    </div><!-- e:content -->
+</div><!-- b:b-lk-menu -->

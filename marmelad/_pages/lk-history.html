@@ -1,0 +1,74 @@
+= yaml =
+pageTitle: ЛК. История пополнений
+bodyMods: 'lk'
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: 'b-container'
+asideLeft: false
+asideRight: false
+
+layout: !!map
+    header : true
+    footer : true
+    left : false
+    right : false
+
+lk : true
+lkMenuActiveIndex : 4
+
+crumbsKey : innerPage
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+
+    <div block="b-lk-table">
+
+        <h1 elem="header">Истрия пополнений</h1>
+        <div elem="scroller">
+            <table class="table2">
+                <tbody>
+                    <tr>
+                        <th class="talbe2-nomer">№</th>
+                        <th>Дата</th>
+                        <th>Сумма, руб</th>
+                        <th>Статус</th>
+                        <th>Баланс</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>22.01.18</td>
+                        <td>1 000</td>
+                        <td>Выполнен</td>
+                        <td>1200</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>22.01.18</td>
+                        <td>1 000</td>
+                        <td>Выполнен</td>
+                        <td>1200</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>22.01.18</td>
+                        <td>1 000</td>
+                        <td>Выполнен</td>
+                        <td>650</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>22.01.18</td>
+                        <td>1 000</td>
+                        <td>Выполнен</td>
+                        <td>650</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!-- e:scroller -->
+
+        {% include "pager.html" %}
+    </div><!-- b:lk-table -->
+
+{% endblock %}

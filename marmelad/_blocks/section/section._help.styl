@@ -1,0 +1,63 @@
+.b-section
+    .b-section__header
+        line-height 35px
+        margin-bottom 0
+    &--help
+        border-bottom 1px dotted rgba(160,151,144,.6)
+.b-help
+    .b-form
+        width 570px
+        max-width 570px
+        margin-left auto
+        margin-right auto
+        @media only screen and (max-width: 767px)
+            width 250px
+            max-width 250px
+        
+        input[type="text"],
+        input[type="tel"]
+            flex 1
+            @media only screen and (max-width: 767px)
+                display block
+                width 100%
+                margin 0 0 10px
+        .b-button
+            flex 0 0 213px
+            max-width 213px
+            margin-left 6px
+
+            @media only screen and (max-width: 767px)
+                margin 0
+                width 100%
+                max-width 100%
+            
+    &__inner 
+        text-align center
+        padding 80px 0 80px
+        width 670px
+        margin 0 auto
+        @media only screen and (max-width: 767px)
+            width 100%
+            padding 50px 0 60px
+            box-sizing border-box
+
+    &__title 
+        line-height 34px
+        font-size 34px
+        @media only screen and (max-width: 767px)
+            font-size 24px
+            line-height 24px
+
+    &__text 
+        padding 31px 0 0
+        color #302721
+        font-size 18px
+        line-height 27px
+
+    &__text strong 
+        display inline-block
+        font-weight bold
+        font-family: $fonts.helios
+
+    &__form 
+        padding 37px 0 0

@@ -1,0 +1,35 @@
+.b-socials
+    &__items 
+        display flex
+        margin-left -13px
+    &__item 
+        margin-left 13px
+        height 41px
+        width 41px
+        position relative
+        border-radius 41px
+        
+        &:before
+            content ''
+            position absolute
+            left 50%
+            top 50%
+            
+            pointer-events none
+            
+            height 30px
+            width 30px
+            
+            border-radius 30px
+            background-color transparent
+            transform translate(-50%,-50%)
+        
+        img 
+            max-width 100%
+            height auto
+            position relative
+            
+        &:hover
+            &:before
+                background-color #fff
+            

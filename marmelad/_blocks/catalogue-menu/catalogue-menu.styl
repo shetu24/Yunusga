@@ -1,0 +1,121 @@
+.b-catalogue-menu 
+    &__columns
+        display flex 
+        @media only screen and (max-width: 767px)
+            display block
+    &__aside
+        flex 0 0 305px
+        max-width 305px
+        padding-right 20px
+        @media only screen and (max-width: 767px)
+            max-width none
+            margin-bottom 30px
+            padding 0
+                
+    &__header
+        text-align left
+    &__title
+        font-weight: $fontWeight.regular
+        margin-bottom 5px
+        &--folder
+            font-size 24px
+            line-height 24px
+            margin-bottom 20px
+            
+    &__items 
+        &--hidden 
+            display none
+        &.active
+            display block
+            
+    &__items ~ &__items
+        margin-top 27px
+    &__list
+        ul 
+            margin 0
+            padding 0
+            list-style-type none
+            
+            li 
+                margin 0
+                padding 0
+                
+            li ~ li
+                margin-top 6px
+                
+    &__link
+        color #274496
+        &:hover
+            text-decoration none
+            color #30221b
+    &__show-more
+        border-bottom 1px dashed #566590
+        &:before
+            content attr(data-show)
+        &:hover
+            text-decoration none
+            border-bottom-color transparent
+            color #30221b
+    &__more 
+        text-decoration underline
+        &:hover
+            text-decoration none
+            color #30221b
+    &__item ~ &__item
+        margin-top 27px 
+        
+    &__hidden
+        display none
+        &.active
+            display inline
+            
+    &__more-link
+        font-size 18px
+        padding-top 36px
+        margin-top 35px
+        text-align center
+        border-top 1px solid #e4e6ed
+        
+        @media only screen and (max-width: 767px)
+            margin-top 20px
+            padding-top 20px
+    
+        a:before 
+            content attr(data-show)
+        a .fa 
+            margin-left 3px
+            position relative
+
+        a.active:before 
+            content attr(data-hide)
+
+        a.active .fa 
+            transform scaleY(-1)
+            top 2px
+            
+    &--page
+        .b-catalogue-menu
+            &__header
+                text-align center
+                margin-bottom 47px
+                @media only screen and (max-width: 767px)
+                    margin-bottom 19px
+            &__items
+                font-size 16px
+                font-weight: $fontWeight.ultra
+            &__title
+                font-size 20px
+                margin-bottom 10px
+                font-weight: $fontWeight.ultra
+                @media only screen and (max-width: 767px)
+                    font-size 18px
+                    margin-bottom 10px
+                &--folder
+                    font-size 24px
+                    margin-bottom 19px  
+            
+.b-catalogue-menu__item.active
+    .b-catalogue-menu__hidden
+        display inline
+    .b-catalogue-menu__show-more:before
+        content attr(data-hide)

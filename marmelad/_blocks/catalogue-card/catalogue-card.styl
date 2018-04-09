@@ -1,0 +1,48 @@
+.b-catalogue-card
+	&__header
+		text-align left
+
+	&__text-indent
+		display block
+		padding-left 17px
+	&__text
+		font-size 14px
+	&__pricing
+		margin 30px 0
+	&__pricing-titles
+		display flex
+		flex-wrap wrap
+	&__pricing-title
+		color #2c221c
+		font-size 16px
+		font-weight: $fontWeight.ultra
+		line-height 1
+		border-radius 3px
+		 
+		padding 5px 13px 6px
+		margin 0 6px 6px
+		 
+		background-color #f7f6f5
+		&:hover,&.active
+			color #2c221c
+			text-decoration none
+			background-color #f9f2de
+			
+	&__pricing-bodys{}
+	&__pricing-body 
+		display none
+		&.active
+			display block   
+	&__master
+		font-size 14px
+		line-height 14px
+		margin-bottom 45px
+		font-weight : $fontWeight.ultra
+		@media only screen and (max-width: 767px)
+			margin-bottom 20px
+		a 
+			&:hover
+				color #4f3d32
+				text-decoration none
+		.b-catalogue-card__header
+			margin-bottom 15px

@@ -1,0 +1,23 @@
+= yaml =
+pageTitle: ЛК. Профиль компании
+bodyMods: 'lk-registration'
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: ''
+asideLeft: false
+asideRight: false
+
+layout: !!map
+    header : true
+    footer : true
+    left : false
+    right : false
+
+crumbsKey : innerPage
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+    {% include "registration.html" %}
+{% endblock %}

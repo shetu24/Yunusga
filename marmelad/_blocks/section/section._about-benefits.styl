@@ -1,0 +1,52 @@
+.b-section
+    &--about-benefits 
+        border-bottom 1px dotted rgba(160,151,144,.6)
+
+.b-about-benefits
+    &__items
+        padding 45px 0 82px
+        display flex
+        @media only screen and (max-width: 950px)
+            display block
+            padding 25px 0 25px
+            position relative
+            
+    &__item 
+        flex none
+        max-width 300px
+        padding 0 10px
+        text-align center
+        margin 0 auto
+        @media only screen and (max-width: 950px)
+            text-align left
+            position relative
+            max-width none
+            padding-left 60px
+            
+        @media only screen and (max-width: 560px)
+            padding-left 0
+        
+
+    &__item ~ &__item 
+        @media only screen and (max-width: 950px)
+            margin-top 30px
+        
+    &__title
+        font-weight: $fontWeight.bold
+        font-size 20px
+        margin-bottom 33px
+        @media only screen and (max-width: 950px)
+            margin-bottom 5px
+        
+    &__icon
+        margin-bottom 16px
+        @media only screen and (max-width: 950px)
+            position absolute
+            left 0
+            top 0
+        @media only screen and (max-width: 560px)
+            display none
+        
+            
+
+    

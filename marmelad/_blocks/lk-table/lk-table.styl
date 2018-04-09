@@ -1,0 +1,101 @@
+.b-lk-table
+    width 690px
+    max-width 100%
+    margin 0 auto
+    font-size 14px
+    
+
+    .table2
+        width 100%
+        margin 0 auto
+        font-weight: $fontWeight.ultra
+        
+        th
+            padding-top 12px
+            padding-bottom 12px
+            vertical-align middle
+            font-size 14px
+            line-height 17px
+
+        th,
+        td
+            text-align center
+            &:first-child
+                width 30px
+                padding-left 7px
+                padding-right 7px
+    .b-pager
+        margin-top 25px
+        @media only screen and (max-width: 767px)
+            margin-top 20px
+    .b-pager__item--prev,
+    .b-pager__item--next
+        font-size 0
+        background none
+    &__header
+        margin-bottom 75px
+        @media only screen and (max-width: 880px)
+            margin-bottom 20px
+    &__scroller
+        overflow-x auto
+        
+        box-shadow 5px 4px 10px #ddd
+        
+    &__balance
+        margin-bottom 14px
+        text-align right 
+    &__balance-num
+        font-size 20px
+        margin-left 4px
+        
+    &__sort-param
+        display flex
+        align-items center
+        color #4f3d32
+        text-decoration none
+        justify-content center
+        
+        .svg-icon
+            height 8px 
+            width 10px
+            fill #5c524b
+            margin-left 7px
+
+        &:hover
+            color #c63e37
+            text-decoration none
+            .svg-icon
+                fill #c63e37
+        &--desc
+            .svg-icon
+                transform rotate(-180deg)
+    &__review
+        text-decoration none
+        
+    &--applications 
+        width 874px
+        
+        th,td
+            padding-left 14px
+            padding-right 14px
+            &:last-child
+                width 145px
+                padding 0 5px
+            &:nth-child(2)
+                width 170px
+            &:nth-child(3)
+                width 170px
+            &:nth-child(6)
+                white-space nowrap
+                
+        td
+            a 
+                text-decoration underline
+                &:hover
+                    text-decoration none
+                &.b-lk-table__review
+                    text-decoration none
+                    color #4f3d32
+                    &:hover
+                        text-decoration underline
+            

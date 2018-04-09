@@ -1,0 +1,10 @@
+<div block="b-socials" mod="{{ socMods }}">
+    <div elem="items">
+        {% for item in socItems %}
+            <a href="{{ item.url }}" elem="item">
+                <img src="{{ item.icon }}" alt="">
+            </a><!-- e:item -->
+        {% endfor %}
+    </div>
+    <!-- e:items -->
+</div><!-- b:b-socials -->

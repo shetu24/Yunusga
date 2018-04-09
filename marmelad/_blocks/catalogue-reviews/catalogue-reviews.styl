@@ -1,0 +1,80 @@
+.b-catalogue-thumb--detailed + .b-catalogue-reviews
+    margin-top -43px
+    @media only screen and (max-width: 880px)
+        margin-top 20px
+
+.b-catalogue-reviews
+    margin-bottom 80px
+    @media only screen and (max-width: 767px)
+        margin-bottom 30px
+
+    &__header
+        text-align left
+        
+    &__columns
+        display flex
+        
+        @media only screen and (max-width: 880px)
+            display block
+        
+    &__aside
+        flex 0 0 301px
+        max-width 301px
+        margin-left 16px
+        padding-top 30px
+        @media only screen and (max-width: 880px)
+            flex none
+            max-width none
+            margin 30px 0 0
+            padding 0
+        
+    &__text
+        font-size 14px
+        line-height 17px
+        
+        p:first-child
+            margin-top 0
+        p:last-child
+            margin-bottom 0
+        
+    &__main
+        flex 1
+        
+    &__items
+        &--hidden
+            margin-top 20px
+            display none
+            &.active
+                display block
+
+    &__item ~ &__item 
+        margin-top 20px
+        
+    &__more
+        border-top 1px solid #e4e6ed
+        text-align center
+        font-size 18px
+        line-height 1
+        font-weight: $fontWeight.ultra
+        margin-top 20px
+        padding-top 40px
+        @media only screen and (max-width: 767px)
+            padding-top 20px
+        a 
+            .fa 
+                margin-left 7px
+            &:before
+                content attr(data-show)
+            &.active
+                &:before
+                    content attr(data-hide)
+            &.active
+                .fa 
+                    position relative
+                    top 3px
+                    transform rotate(-180deg)
+                    
+    &--detailed
+        .b-catalogue-reviews__more
+            padding-top 20px
+

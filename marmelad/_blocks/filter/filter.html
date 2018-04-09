@@ -1,0 +1,59 @@
+ <div block="b-filter" mods="{{ filterMods }}">
+    {% if filterMods == "catalogue" %}
+    <div elem="content" mix="block:b-container">
+    {% endif %}
+    <div elem="row">
+        <div elem="group" mods="type_text">
+            <div elem="item" mods="control control_text">
+                <input id="autocomplete-spec" elem="input" mods="autocomplete autocomplete_spec" type="text" placeholder="Мастер, компания, услуга">
+            </div><!-- e:item -->
+
+            <div elem="item" mods="control control_text">
+                <input id="autocomplete-brand" elem="input" mods="autocomplete autocomplete_brand" type="text" placeholder="Бренд">
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </div><!-- e:item -->
+
+            <div elem="item" mods="control control_text">
+                <input id="autocomplete-metro" elem="input" mods="autocomplete autocomplete_metro" type="text" placeholder="Метро, город МО">
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </div><!-- e:item -->
+        </div><!-- e:group -->
+
+        <div elem="item" mods="control control_submit">
+            <button type="submit" block="b-button">Найти</button>
+        </div><!-- e:submit -->
+    </div><!-- e:row -->
+    {% if filterChecks %}
+    <div elem="row" mods="checks">
+        <div elem="group" mods="type_checkbox">
+            <div elem="item" mods="control control_checkbox">
+                <input type="checkbox" elem="checkbox" checked id="fch1">
+                <label elem="label" for="fch1">Промышленные</label>
+            </div><!-- e:item -->
+
+            <div elem="item" mods="control control_checkbox">
+                <input type="checkbox" elem="checkbox" checked id="fch2">
+                <label elem="label" for="fch2">Бытовые</label>
+            </div><!-- e:item -->
+
+            <div elem="item" mods="control control_checkbox">
+                <input type="checkbox" elem="checkbox" id="fch3">
+                <label elem="label" for="fch3">Работают 24 часа</label>
+            </div><!-- e:item -->
+
+            <div elem="item" mods="control control_checkbox">
+                <input type="checkbox" elem="checkbox" id="fch4">
+                <label elem="label" for="fch4">Только компании</label>
+            </div><!-- e:item -->
+
+            <div elem="item" mods="control control_checkbox">
+                <input type="checkbox" elem="checkbox" id="fch5">
+                <label elem="label" for="fch5">Только мастера</label>
+            </div><!-- e:item -->
+        </div><!-- e:group -->
+    </div><!-- e:row -->
+    {% endif %}
+    {% if filterMods == "catalogue" %}
+    </div>
+    {% endif %}
+</div><!-- b:b-filter -->

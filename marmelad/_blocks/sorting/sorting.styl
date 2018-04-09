@@ -1,0 +1,59 @@
+.b-sorting
+    display flex
+    align-items center
+    padding 0 12px
+    font-size 14px
+    line-height 15px
+    background-color #f9f2de
+    margin 40px -8px 21px
+    
+    @media only screen and (max-width: 767px)
+        display none
+   
+    &__title
+        margin-right 30px
+        @media only screen and (max-width: 767px)
+            margin 0 0 14px
+            font-size 16px
+            font-weight: $fontWeight.regular
+
+    &__items
+        display flex
+        align-items center
+        margin-left -28px
+        @media only screen and (max-width: 767px)
+            justify-content flex-start
+            flex-wrap wrap
+            margin-left -13px
+
+    &__item
+        color #4f3d32
+        display flex
+        align-items center
+        margin-left 8px
+        padding 8px 10px 9px
+        border 1px dashed transparent
+        
+        @media only screen and (max-width: 767px)
+            margin-bottom 10px
+        
+        .svg-icon
+            position relative
+            top 1px
+            height 8px
+            width 10px
+            margin-left 5px
+            fill #5c524b
+            
+        &:hover
+            color #4f3d32
+            text-decoration none
+            border 1px dashed #8e847d
+        &.active
+            background #fff
+            border 1px dashed #8e847d
+            
+        &--desc
+            .svg-icon
+                transform rotate(-180deg)
+        

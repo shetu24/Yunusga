@@ -1,0 +1,286 @@
+= yaml =
+pageTitle: ЛК. Профиль компании
+bodyMods: 'lk'
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: 'b-container'
+asideLeft: false
+asideRight: false
+
+layout: !!map
+    header : true
+    footer : true
+    left : false
+    right : false
+
+lk : true
+lkMenuActiveIndex : 1
+
+crumbsKey : innerPage
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+    <form block="b-profile" mods="company">
+        <h1>Профиль компании</h1>        
+
+        <div elem="controls">
+            <div elem="grid">
+                <div elem="row">
+                    <div elem="header">Данные для связи с оператором:</div><!-- e:header -->
+                    <div elem="cols">
+                        <div elem="col" mods="3">
+                            <div elem="item">
+                                <input type="tel" placeholder="Телефон">
+                                <div elem="actions">
+                                    <a href="#" elem="action" mods="add"><img src="img/add-icon.png" alt="">добавить</a><!-- e:action -->
+                                </div><!-- e:actions -->
+                            </div><!-- e:item -->
+                        </div><!-- e:col -->
+
+                        <div elem="col" mods="3">
+                            <div elem="item">
+                                <input type="email" placeholder="E-mail">
+                            </div><!-- e:item -->
+                        </div><!-- e:col -->
+                    </div><!-- e:cols -->
+                </div><!-- e:row -->
+
+
+                <div elem="row">
+                    <div elem="header">Данные, отображаемые в карточке компании:</div><!-- e:header -->
+                    <div elem="cols">
+                        <div elem="col" mods="3">
+                            <div elem="item">
+                                <div elem="header">Логотип компании:</div><!-- e:header -->
+                                <input type="file" data-browse="Загрузить">
+                            </div><!-- e:item -->
+                        </div><!-- e:col -->
+
+                        <div elem="col" mods="3">
+                            <div elem="item">
+                                <div elem="header">Картинка для фона:</div><!-- e:header -->
+                                <input type="file" data-browse="Загрузить">
+                            </div><!-- e:item -->
+                        </div><!-- e:col -->
+
+                        <div elem="col" mods="3">
+                            <div elem="item">
+                                <div elem="header">&nbsp;</div><!-- e:header -->
+                                <input type="text" placeholder="График работы">
+
+                                <div elem="checks">
+                                    <div elem="check">
+                                        <input type="checkbox" id="profile-ch1">
+                                        <label for="profile-ch1">Работают 24 часа</label>
+                                    </div><!-- e:check -->
+                                </div><!-- e:checks -->
+                            </div><!-- e:item -->
+                        </div><!-- e:col -->
+                    </div><!-- e:cols -->
+                </div><!-- e:row -->
+
+
+                <div elem="row">
+                    <div elem="header"></div><!-- e:header -->
+                    <div elem="cols">
+                        <div elem="col" mods="2 address">
+                            <div elem="item">
+                                <textarea placeholder="Адрес компании, комментарии"></textarea>
+                            </div><!-- e:item -->
+                        </div><!-- e:col -->
+
+                        <div elem="col" mods="3">
+                            <div elem="item">
+                                <div elem="header">Выбрать на карте</div><!-- e:header -->
+                                <div elem="map" id="profile-address-map"></div><!-- e:profile-address-map -->
+                            </div><!-- e:item -->
+
+                            <div elem="item">
+                                <input type="text" placeholder="Введите адрес">
+
+                                <div elem="actions">
+                                    <a href="#" elem="action" mods="add"><img src="img/add-icon.png" alt="">добавить</a><!-- e:action -->
+                                </div><!-- e:actions -->
+                            </div><!-- e:item -->
+                        </div><!-- e:col -->
+                    </div><!-- e:cols -->
+                </div><!-- e:row -->
+
+
+
+                <div elem="row">
+                    <div elem="cols">
+                        <div elem="col" mods="2">
+                            <div elem="item">
+                                <div elem="header">Подтверждение квалификации:</div><!-- e:header -->
+                                <div elem="cols">
+                                    <div elem="col" mods="2-5 qualifications">
+                                        <div elem="item">
+                                            <select data-placeholder="Бренд">
+                                                <option></option>
+                                                <option value="">option1</option>
+                                                <option value="">option2</option>
+                                                <option value="">option3</option>
+                                                <option value="">option4</option>
+                                            </select>
+                                        </div><!-- e:item -->
+                                    </div><!-- e:col -->
+
+                                    <div elem="col" mods="2-5 qualifications">
+                                        <div elem="item">
+                                            <select data-placeholder="Срециальность компании">
+                                                <option></option>
+                                                <option value="">option1</option>
+                                                <option value="">option2</option>
+                                                <option value="">option3</option>
+                                                <option value="">option4</option>
+                                            </select>
+                                        </div><!-- e:item -->
+                                    </div><!-- e:col -->
+                                </div><!-- e:cols -->
+                            </div><!-- e:item -->
+                        </div><!-- e:col -->
+
+                        <div elem="col" mods="3">
+                            <div elem="item">
+                                <div elem="header">Выбрать на карте</div><!-- e:header -->
+                                <div elem="checks">
+                                    <div elem="check">
+                                        <input checked type="checkbox" id="profile-ch2">
+                                        <label for="profile-ch2">Промышленные</label>
+                                    </div><!-- e:check -->
+
+                                    <div elem="check">
+                                        <input checked type="checkbox" id="profile-ch3">
+                                        <label for="profile-ch3">Бытовые</label>
+                                    </div><!-- e:check -->
+                                </div><!-- e:checks -->
+                            </div><!-- e:item -->
+                        </div><!-- e:col -->
+                    </div><!-- e:cols -->
+
+                    <div elem="cols">
+                        <div elem="col" mods="3">
+                            <div elem="item">
+                                <input type="file" data-browse="загрузить">
+                                <div elem="actions">
+                                    <a href="#" elem="action" mods="add"><img src="img/add-icon.png" alt="">добавить</a><!-- e:action -->
+                                </div><!-- e:actions -->
+                            </div><!-- e:item -->
+                        </div><!-- e:col -->
+                    </div><!-- e:cols -->
+                </div><!-- e:row -->
+
+
+                <div elem="row">
+                    <div elem="cols">
+                        <div elem="col" mods="1">
+                            <div elem="item">
+                                <textarea placeholder="Краткое описание компании"></textarea>
+                            </div><!-- e:item -->
+                        </div><!-- e:col -->
+                    </div><!-- e:cols -->
+                </div><!-- e:row -->
+
+
+                <div elem="row">
+                    <div elem="cols">
+                        <div elem="col" mods="2 prices">
+                            <div elem="item">
+                                <div elem="header">Стоимость услуг, руб:</div><!-- e:header -->
+                                <div elem="cols">
+                                    <div elem="col" mods="2">
+                                        <div elem="item">
+                                            <select data-placeholder="Бренд">
+                                                <option></option>
+                                                <option value="">option1</option>
+                                                <option value="">option2</option>
+                                                <option value="">option3</option>
+                                                <option value="">option4</option>
+                                            </select>
+                                        </div><!-- e:item -->
+                                    </div><!-- e:col -->
+
+                                    <div elem="col" mods="3">
+                                        <div elem="item">
+                                            <input type="text" placeholder="от 3000">
+                                        </div><!-- e:item -->
+                                    </div><!-- e:col -->
+                                </div><!-- e:cols -->
+
+                                <div elem="cols">
+                                    <div elem="col" mods="2">
+                                        <div elem="item">
+                                            <select data-placeholder="Услуга">
+                                                <option></option>
+                                                <option value="">option1</option>
+                                                <option value="">option2</option>
+                                                <option value="">option3</option>
+                                                <option value="">option4</option>
+                                            </select>
+                                        </div><!-- e:item -->
+                                    </div><!-- e:col -->
+
+                                    <div elem="col" mods="3">
+                                        <div elem="item">
+                                            <input type="text" placeholder="Введите стоимость">
+                                        </div><!-- e:item -->
+                                    </div><!-- e:col -->
+                                </div><!-- e:cols -->
+
+                                <div elem="actions">
+                                    <a href="#" elem="action" mods="remove"><img src="img/remove-icon.png" alt="">удалить</a><!-- e:action --><a href="#" elem="action" mods="add"><img src="img/add-icon.png" alt="">добавить</a><!-- e:action -->
+                                </div><!-- e:actions -->
+                            </div><!-- e:item -->
+                        </div><!-- e:col -->
+
+                        <div elem="col" mods="3">
+                            <div elem="item">
+                                <div elem="header">Стоимость выезда, руб:</div><!-- e:header -->
+                                <input type="text" placeholder="Введите стоимость">
+                            </div><!-- e:item -->
+                        </div><!-- e:col -->
+                    </div><!-- e:cols -->
+                </div><!-- e:row -->
+
+
+                <div elem="row">
+                    <div elem="cols">
+                        <div elem="col" mods="3">
+                            <div elem="item">
+                                <div elem="header">Загрузить лицензии/сертификаты:</div><!-- e:header -->
+                                <input type="file" data-browse="Загрузить">
+                            </div><!-- e:item -->
+
+                            <div elem="actions">
+                                <a href="#" elem="action" mods="add"><img src="img/add-icon.png" alt="">добавить</a><!-- e:action -->
+                            </div><!-- e:actions -->
+                        </div><!-- e:col -->
+                    </div><!-- e:cols -->
+                </div><!-- e:row -->
+            </div><!-- e:grid -->
+        </div><!-- e:controls -->
+
+
+        <div elem="masters">
+            <div elem="header" class="h2">
+                Мастера (3)
+                <div elem="actions">
+                    <a href="#" elem="action" mods="add"><img src="img/add-icon.png" alt="">добавить</a><!-- e:action -->
+                </div><!-- e:actions -->
+            </div><!-- e:haeder -->
+    
+            {% set catalogue = {'list': profileMastersList} %}
+            {% set moreItems = true %}
+            {% set deleteItems = true %}
+            {% include "catalogue-list.html" %}
+            {% set deleteItems = false %}
+        </div><!-- e:masters -->
+
+        <div elem="save">
+            <button block="b-button">сохранить</button>
+        </div><!-- e:save -->
+    </form><!-- b:b-profile -->
+{% endblock %}

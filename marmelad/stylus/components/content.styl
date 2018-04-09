@@ -1,0 +1,321 @@
+::-moz-selection
+    background : $selection.bgc
+    color : $selection.color
+    text-shadow : none
+
+::selection
+    background : $selection.bgc
+    color : $selection.color
+    text-shadow : none
+
+/* IE 10+ */
+::-webkit-input-placeholder
+    color : $placeholders.normal
+:-moz-placeholder
+    color : $placeholders.normal
+/* FF 4-18 */
+::-moz-placeholder
+    color : $placeholders.normal
+/* FF 19+ */
+:-ms-input-placeholder
+    color : $placeholders.normal
+
+if $placeholders.focus
+    /* Input placeholder color
+     ========================================================================== */
+    /* IE 10+ */
+    input:focus::-webkit-input-placeholder
+        color : $placeholders.focus
+    input:focus:-moz-placeholder
+        color : $placeholders.focus
+    /* FF 4-18 */
+    input:focus::-moz-placeholder
+        color : $placeholders.focus
+    /* FF 19+ */
+    input:focus:-ms-input-placeholder
+        color : $placeholders.focus
+        
+    textarea:focus::-webkit-input-placeholder
+        color : $placeholders.focus
+    textarea:focus:-moz-placeholder
+        color : $placeholders.focus
+    /* FF 4-18 */
+    textarea:focus::-moz-placeholder
+        color : $placeholders.focus
+    /* FF 19+ */
+    textarea:focus:-ms-input-placeholder
+        color : $placeholders.focus
+
+*
+    min-width 0
+    min-height 0
+    -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+    box-sizing border-box
+
+html
+    font-size : $html.fontSize
+    font-family : $html.family
+    font-weight : $html.weight
+    line-height : $html.lineHeight
+    color : $html.color
+    background-color : $html.bgc
+
+    font-feature-settings : kern, liga, onum
+    -webkit-font-smoothing : antialiased
+    -webkit-text-size-adjust : 100%
+    -ms-text-size-adjust : 100%
+
+body
+    font-size : inherit
+    font-family : inherit
+    font-weight : inherit
+    line-height : inherit
+    color : inherit
+    background-color : inherit
+
+blockquote
+    font-style       : $blockquote.font.style
+    padding          : 15px
+    padding-left     : $blockquote.gutter
+    border-left      : $blockquote.border.size solid $blockquote.border.color
+    background-color : rgba($blockquote.border.color, .03)
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6
+    font-family    : $headings.family
+    font-weight    : $headings.weight
+    color          : $headings.color
+    text-transform : $headings.transform
+    text-align     : center
+    margin-bottom  : .9em
+    
+    @media only screen and (max-width: 900px)
+        margin-bottom .6em
+    
+    &::-moz-selection
+        background : $selection.bgc
+        color : $selection.color
+        text-shadow : none
+
+    &::selection
+        background : $selection.bgc
+        color : $selection.color
+        text-shadow : none
+h1, .h1
+    font-size 36px
+    @media only screen and (max-width: 900px)
+        font-size 30px
+        
+    @media only screen and (max-width: 700px)
+        font-size 27px
+
+h2, .h2
+    font-size 20px
+h3, .h3
+    font-size 20px
+    font-weight : $fontWeight.regular
+h4, .h4
+    font-size 18px
+h5, .h5
+    font-size 17px
+    font-weight : $fontWeight.regular
+h6, .h6
+    font-size 17px
+
+template, /* 1 */
+[hidden]
+    display none
+    
+input, a, textarea, button
+    outline none !important
+    
+input
+    &[type="text"],
+    &[type="tel"],
+    &[type="email"],
+    &[type="password"],
+    &[type="url"]
+        display inline-block
+        border 1px solid #796d63
+        border-radius 3px
+        color #7c6656
+        height 50px
+        padding 0 25px
+        font-size 20px
+        font-weight: $fontWeight.ultra
+        margin 0
+        
+
+textarea 
+    display inline-block
+    border 1px solid #796d63
+    border-radius 3px
+    color #7c6656
+    font-size 20px
+    font-weight: $fontWeight.ultra
+    margin 0
+    padding 8px 25px
+    
+    
+input::-ms-clear
+   display none
+
+
+// font weights
+for $weight, $value in $fontWeight
+    .font-{$weight}
+        font-weight : $value
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden
+    border 0
+    clip rect(0 0 0 0)
+    height 1px
+    margin -1px
+    overflow hidden
+    padding 0
+    position absolute
+    width 1px
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus
+    clip auto
+    height auto
+    margin 0
+    overflow visible
+    position static
+    width auto
+
+svg:not(:root)
+    overflow hidden
+    
+// списк
+
+.b-ul,
+.b-ol   
+    line-height 1
+    padding-left 50px
+    
+    li ~ li 
+        margin-top 9px
+        
+.b-ul
+    padding-left 35px
+    list-style-type none
+    li 
+        padding-left 37px
+        position relative
+        &:before
+            content ''
+            position absolute
+            left 0
+            top 6px
+            width 22px
+            border-top 1px solid #566590
+            
+// Таблицы
+.table2
+    border none
+    border-spacing 0
+    border-collapse collapse
+
+    tr 
+        // border-top 1px solid #cac2bd
+        // border-bottom 1px solid #cac2bd
+
+        &:nth-child(even)
+            background-color #f5f1e7
+        // &:first-child
+        //     border-top 1px solid rgba(160,151,144,.5)
+        // &:last-child
+        //     border-bottom 1px solid rgba(160,151,144,.5)
+
+    td,th
+        border 1px solid rgba(160,151,144,.5)
+        padding 5px 20px
+
+
+// Кнопки
+.b-button
+    display inline-flex
+    
+    cursor pointer
+    
+    color #fef7ef
+    text-decoration none
+
+    padding 0 20px
+   
+    font-size 18px
+    line-height 54px
+    height 50px
+    font-weight : $fontWeight.bold
+    
+    justify-content center
+    align-items center
+    text-align center
+    text-transform uppercase
+    text-decoration none
+    letter-spacing 0.45px
+
+    border none
+    border-radius 3px
+    background-image linear-gradient(to top, #c33a33 0%, #cd4740 100%)
+    background-color #cd4740;
+    
+    &:hover,
+    &:focus
+        color #fff
+        text-decoration none
+        background-image: linear-gradient(to top, #c33a33 0%, #cd4740 100%);
+        background-color: #cd4740;
+        
+    &:active
+        box-shadow inset 3px 4px 5px rgba(157, 25, 25, 0.31)
+        background-image linear-gradient(to top, #c33a33 0%, #cd4740 100%)
+
+    // mods
+    &--dark
+        background-image linear-gradient(to top, #5c524b 0%, #5c524b 100%)
+        background-color #cd4740
+        &:hover,
+        &:focus
+            color #fff
+            text-decoration none
+            background-image linear-gradient(to top, #4a423d 0%, #5c524b 100%)
+
+        &:active
+            box-shadow inset 3px 4px 5px rgba(0, 0, 0, .2)
+            background-image linear-gradient(to top, #5c524b 0%, #5c524b 100%)
+            
+
+// Контейнер
+.b-container
+    width : $appWidth
+    max-width 100%
+
+    margin-left auto
+    margin-right auto
+
+    padding-left  : $appGutter
+    padding-right : $appGutter
+    
+
+// color-accent
+.color-accent
+    color $colorAccent
+    
+.text-indent
+    display block
+    padding-left 18px
+    
+.pricing-indent
+    margin-left 18px
+
+
+    

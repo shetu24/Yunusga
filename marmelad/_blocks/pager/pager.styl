@@ -1,0 +1,42 @@
+.b-pager
+    display flex
+    justify-content flex-end
+    aling-items center
+    font-size 14px
+    line-height 22px
+    @media only screen and (max-width: 767px)
+        justify-content center
+    
+    &__item
+        color #4f3d32
+        padding 0 8px
+        margin-left 4px
+        &:hover,
+        &.active
+            text-decoration none
+            color #c63e37
+            background-color #f9f2de
+        &--prev,
+        &--next
+            display flex
+            align-items center
+            background-color #f9f2de
+            padding-left 6px
+            padding-right 6px 
+            .svg-icon
+                height 8px
+                width 10px
+                fill #8e847d
+                position relative
+                top 1px
+            &:hover
+                .svg-icon
+                    fill #c63e37
+        &--prev
+            .svg-icon
+                margin-right 5px
+                transform rotate(-90deg)
+        &--next
+            .svg-icon
+                margin-left 5px
+                transform rotate(90deg)

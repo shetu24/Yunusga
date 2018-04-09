@@ -1,0 +1,23 @@
+<div block="b-catalogue-list">
+    <div elem="items">
+        {% for item in catalogue.list %}
+        <div elem="item">
+            {% include "catalogue-thumb.html" %}
+        </div><!-- e:item -->
+        {% endfor %}
+    </div><!-- e:items -->
+
+    {% if moreItems %}
+    <div elem="items" mods="hidden">
+    	{% for item in catalogue.list %}
+        <div elem="item">
+            {% include "catalogue-thumb.html" %}
+        </div><!-- e:item -->
+        {% endfor %}
+    </div><!-- e:items -->
+
+    <div elem="more">
+    	<a href="#" data-show="открыть больше" data-hide="скрыть"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+    </div><!-- e:more -->
+    {% endif %}
+</div><!-- b:b-catalogue-list -->

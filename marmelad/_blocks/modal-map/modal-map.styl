@@ -1,0 +1,72 @@
+.b-modal-map
+    position absolute
+    width 100%
+    height 100%
+    &__points
+        display none
+
+.b-map-balloon
+    width 286px
+    background-color #fff
+    border 1px solid #d4ceca
+    transform translate(-50%, -100%)
+    margin-top -32px
+    
+    .b-catalogue-thumb__meta
+        flex 0 0 90px
+        max-width 90px
+        margin-right 13px
+    .b-catalogue-thumb__title
+        font-size 14px
+        line-height 17px
+        min-height 47px
+        margin-bottom 7px
+    .b-catalogue-thumb__data-row~.b-catalogue-thumb__data-row
+        margin-top 5px
+        
+    .b-catalogue-thumb__image
+        margin-bottom 7px
+        
+    .b-catalogue-thumb__main
+        padding-bottom 0
+        
+    .b-catalogue-thumb__body
+        margin-bottom 0
+        border-bottom none
+    .b-catalogue-thumb ~ .b-catalogue-thumb 
+        margin-top 10px
+        border-top 1px solid #d4ceca
+        
+    &__items
+        max-height 231px
+        overflow-y auto
+        position relative
+         
+    &__close
+        position absolute
+        top 0
+        right 0
+        width 35px
+        height 35px
+        z-index 1
+        cursor pointer
+        &:before
+            font-family "Muller Ultra Light" !important
+            font-size 25px
+            line-height 35px
+            display block
+            content "\00d7"
+            text-align center
+            
+    &:before
+        content ''
+        position absolute
+        left 50%
+        bottom 0
+        height 55px
+        width 37px
+        margin-bottom -36px
+        z-index 1
+        margin-left -18px
+        background url(../img/map-balloon-active.png) center center no-repeat
+        

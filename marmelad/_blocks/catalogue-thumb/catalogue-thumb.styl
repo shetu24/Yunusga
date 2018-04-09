@@ -1,0 +1,496 @@
+.b-catalogue-thumb
+    color #4f3d32
+    font-size 14px
+    line-height 16px
+    .i-metro 
+        margin 3px 2px 0 
+    &:hover
+        box-shadow 5px 4px 10px #ddd
+    &__body
+        display flex
+        border 1px solid rgba(142,132,125,.48)
+        background-color #fff
+        @media only screen and (max-width: 880px)
+            display block
+    &__main
+        display flex
+        flex 1
+        padding 21px 65px 17px 15px
+        position relative
+        
+        @media only screen and (max-width: 560px)
+            display block
+            padding-right 15px
+        
+        &:before
+            content ''
+            position absolute
+            right 0
+            top 16px
+            bottom 16px
+            border-right 1px dashed rgba(142,132,125,.48)
+            @media only screen and (max-width: 880px)
+                display none
+            
+    &__meta
+        flex 0 0 121px
+        max-width 121px
+        margin-right 14px
+        text-align center
+        @media only screen and (max-width: 560px)
+            max-width none
+            text-align left
+            display flex
+            align-items center
+            margin-bottom 20px
+            margin-right 0
+        
+    &__image
+        display block
+        text-decoration none
+        font-size 0
+        line-height 0
+        border-radius 6px
+        margin-bottom 17px
+        @media only screen and (max-width: 560px)
+            margin 0 20px 0 0
+        img 
+            max-width 100%
+            height auto
+            
+    &__favorite
+        text-align center
+        margin-bottom 12px
+        margin-top -13px
+        @media only screen and (max-width: 560px)
+            text-align left
+    &__favorite-add
+        display inline-flex
+        align-items center
+        font-size 14px
+        color #4f3d32
+        @media only screen and (max-width: 560px)
+            align-items left
+        &:hover
+            text-decoration none
+            color #4f3d32
+        .svg-icon
+            width 17px
+            height 16px
+            fill #fff            
+            stroke #c63e37
+            margin-right 6px
+            background-color #fff
+            stroke-width 1px
+
+            svg 
+                position relative
+                top 0px
+                
+        &.active
+            .svg-icon
+                fill #c63e37
+            
+    &__rating
+        display flex
+        justify-content center
+        color #889cc0
+        font-size 12px
+        margin-bottom 9px
+        @media only screen and (max-width: 560px)
+            justify-content flex-start
+        
+    &__comments-count
+        font-size 12px 
+        line-height 10px
+        
+    &__content 
+        flex 1
+
+    &__content-pic
+        flex 1
+        @media only screen and (max-width: 560px)
+            display none
+        img 
+            display block
+            max-width 100%
+            height auto
+        
+    &__title
+        text-align left
+        line-height 23px
+        min-height 45px
+        margin-bottom 15px
+        @media only screen and (max-width: 880px)
+            min-height 0
+        a 
+            color #4f3d32
+            &:hover
+                text-decoration none
+                color #566590
+    &__title-small 
+        font-size 14px
+        font-weight: $fontWeight.ultra
+    &__data-row
+        &--description
+            @media only screen and (max-width: 590px)
+                display none
+    &__data-row~&__data-row
+        margin-top 16px
+        
+    &__data {}
+        
+    &__data-item
+        &--small
+            font-size 12px
+            line-height 12px
+            margin-top 4px
+        &--price
+            font-weight: $fontWeight.bold
+            
+        &--reviewer-name
+            text-align right
+            @media only screen and (max-width: 767px)
+                text-align left
+
+        &--moderation
+            margin-top 25px
+            font-size 12px
+        &--brands 
+            margin 8px 0 12px
+            
+        [href*="tel"]
+            color #4f3d32
+            font-weight: $fontWeight.bold
+            &:hover
+                text-decoration none
+                color #4f3d32
+            
+    &__address-bookmarks
+        position absolute
+        right 1px
+        top 22px
+        
+        @media only screen and (max-width: 880px)
+            position static
+            margin-top 25px
+            margin-bottom -18px
+            display flex
+        
+    &__address-bookmark
+        display block
+        
+        font-size 12px
+        font-weight : $fontWeight.ultra
+        line-height 12px
+        color #4f3d32
+        text-decoration none
+        
+        letter-spacing 0.3px
+        border 1px dashed #8e847d
+        border-right none
+        border-radius 6px 0 0 6px
+        padding 10px 4px 8px 7px
+        background-color #f9f2de
+        @media only screen and (max-width: 880px)
+            border 1px dashed #8e847d
+            border-bottom none
+            border-radius 6px 6px 0 0
+            margin-left -135px
+            
+        @media only screen and (max-width: 560px)
+            margin-left 0
+        
+            
+        &:hover,
+        &.active
+            background-color #fff
+            color #4f3d32
+            text-decoration none
+        &.active
+            cursor default
+    &__address-bookmark ~ &__address-bookmark
+        margin-top 9px
+        @media only screen and (max-width: 880px)
+            margin-top 0
+            margin-left 10px
+            
+    &__aside
+        flex 0 0 297px
+        max-width 297px
+        position relative
+        padding 21px 15px
+        @media only screen and (max-width: 880px)
+            max-width none
+            position relative
+            border-top 1px dashed rgba(142,132,125,0.48)
+            
+        &--map
+            padding 0
+            height 204px
+            background-color #fbf5e4
+
+            @media only screen and (max-width: 880px)
+                margin-top 20px
+            
+            img 
+                display block
+                margin 0 auto
+                max-width 100%
+                height auto
+    &__contact
+        &[data-tab-index]
+            display none
+        &.active
+            display block
+    &__callback
+        margin-top 30px
+        text-align center
+        @media only screen and (max-width: 880px)
+            text-align left
+            margin-top 14px
+        .b-button
+            display block
+            margin 9px auto 0
+            padding 0
+            font-size 14px
+            letter-spacing 0.35px
+            width 200px
+            max-width 100%
+            height 40px
+            line-height 43px
+            @media only screen and (max-width: 880px)
+                margin-left 0
+            
+    &__callback-title
+        font-weight: $fontWeight.bold
+        line-height 17px
+        
+    &__address
+        margin-top 21px
+        font-size 12px
+        line-height 15px
+        @media only screen and (max-width:  880px)
+            margin-top 14px 
+    &__address-item ~ &__address-item
+        margin-top 16px
+    &__address-title
+        color #566590
+        margin-bottom 6px
+        a
+            text-decoration none
+            &:hover
+                color #352f2b
+                text-decoration none
+
+    &__pricing-text
+        margin-top 25px
+
+    &__info
+        // margin-top 25px
+        margin-top -1px
+        display flex
+
+        @media only screen and (max-width: 880px)
+            display block
+            margin-top 0
+        @media only screen and (max-width: 560px)
+            display none
+        .b-catalogue-thumb__title
+            min-height 0
+        .b-catalogue-thumb__aside
+            border 1px dashed rgba(142,132,125,0.48)
+    &__info-main
+        flex 1
+        padding-top 25px
+        padding-right 25px
+        border-top 1px dashed rgba(142,132,125,0.48)
+        @media only screen and (max-width: 880px)
+            padding-right 0
+            margin-bottom 25px
+    &__childs
+        margin-top -1px
+    
+    // mods
+    &--child
+        &:hover
+            box-shadow none
+        .b-catalogue-thumb
+            &__body
+                background-color #fcf9ef
+            &__main
+                &:before
+                    top 0
+                    bottom 0
+        .b-catalogue-thumb__main 
+            @media only screen and (max-width: 880px)
+                flex-direction column
+                flex none
+        .b-catalogue-thumb__aside
+            @media only screen and (max-width: 880px)
+                border-top none
+                padding-top 4px
+        .b-catalogue-thumb__content
+            @media only screen and (max-width: 880px)
+                order -1
+                flex none
+        .b-catalogue-thumb__meta
+            @media only screen and (max-width: 880px)
+                flex none
+                text-align left
+                
+        .b-catalogue-thumb__address
+            @media only screen and (max-width: 880px)
+                margin-top 7px
+                
+        .b-catalogue-thumb__rating
+            @media only screen and (max-width: 880px)
+                text-align left
+                justify-content flex-start
+            
+        &:first-child
+            .b-catalogue-thumb__main
+                &:before
+                    top 16px
+        &:last-child
+            .b-catalogue-thumb__main
+                &:before
+                    bottom 16px 
+    &--child ~ &--child
+        margin-top -1px
+                    
+    &--catalogue-review
+        &:hover
+            box-shadow none
+        .b-catalogue-thumb
+            &__body
+                border none
+                background-color #f7f6f5
+            &__main
+                &:before
+                    display none
+            &__image
+                margin-bottom 0
+                @media only screen and (max-width: 560px)
+                    margin-left auto
+                    margin-right auto
+                    
+            &__title
+                min-height 0
+            &__content 
+                display flex 
+                flex-direction column
+            &__data
+                display flex
+                flex-direction column
+                flex 1 1 auto
+            &__data-item
+                &--reviewer-name
+                    margin-top auto
+                    
+    &--catalogue-review_detailed
+        .b-catalogue-thumb
+            &__main
+                display block
+            &__meta
+                max-width none
+            &__rating
+                justify-content flex-start
+
+    &--detailed
+        &:hover
+            box-shadow none
+        .b-catalogue-thumb
+            &__body
+                border none
+                align-items flex-start
+            &__main
+                padding 0 13px 0 0
+                &:before
+                    display none
+            &__content
+                display flex
+                flex-direction column
+            &__data
+                flex 1 1 auto
+                display flex
+                flex-direction column
+                
+            &__data-row
+                &:last-child
+                    margin-top auto
+            
+            &__address-body
+                padding-left 30px
+                min-height 30px
+                background url(../img/map-balloon-small.png) left top no-repeat
+                    
+            &__aside
+                @media only screen and (max-width: 880px)
+                    margin-top 20px
+    &--pricing
+        .b-catalogue-thumb
+            &__body 
+                background-color #f7f6f5
+            &__main
+                padding-right 15px
+                font-size 14px
+                display block
+                
+                p 
+                    margin 0 0 5px
+                    
+    &--popup
+        @media only screen and (max-width: 560px)
+            .b-catalogue-thumb
+                &__main
+                    display flex
+                &__meta
+                    display block
+                    margin-bottom 0
+                &__image
+                    margin-right 0
+
+.b-catalogue-card--company:not(.b-catalogue-card--without-address)
+    
+    .b-catalogue-thumb
+        &__main
+            flex-wrap wrap
+        & + .b-catalogue-reviews
+            margin-top 25px
+    .b-catalogue-thumb--detailed
+        margin-bottom 30px
+        .b-catalogue-thumb__content
+            flex 0 0 100%
+            max-width 100%
+            padding 24px 0 20px
+            
+            @media only screen and (max-width: 560px)
+                padding-top 0
+            
+.b-catalogue-card--without-address
+    .b-catalogue-thumb__data-row:last-child
+        margin-top 20px 
+    .b-catalogue-thumb--detailed .b-catalogue-thumb__main
+        padding 0
+        margin-bottom 35px
+    .b-catalogue-thumb__info
+        border 1px dashed rgba(142,132,125,0.48)
+    .b-catalogue-thumb__info-main
+        padding-left 15px
+        padding-right 15px
+        border none
+        position relative
+        &:before
+            content ''
+            position absolute
+            right 0
+            top 16px
+            bottom 16px
+            border-right 1px dashed rgba(142,132,125,0.48)
+    .b-catalogue-thumb__aside--contacts
+        border none 
+        
+    .b-catalogue-thumb__address-body
+        padding-left 0
+        background none        

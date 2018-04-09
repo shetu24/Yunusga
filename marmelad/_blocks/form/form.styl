@@ -1,0 +1,236 @@
+.b-form
+    
+    &__header 
+        text-align left
+
+    &--horizontal
+        display flex
+        align-items center
+        @media only screen and (max-width: 767px)
+            display block
+    &--vertical
+        
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        textarea
+            display block
+            width 100%
+            
+        label 
+            margin-bottom 0
+            
+        .b-form
+            &__radios,
+            &__checks
+                margin-bottom 32px
+
+            &__radio,
+            &__check 
+                display flex
+                align-items center
+                
+                .jq-radio,
+                .jq-checkbox
+                    flex-shrink 0
+                    margin-right 10px
+                    
+                    .b-registration &
+                        margin-right 23px
+                    
+            &__radio ~ .b-form__radio ,
+            &__check ~ .b-form__check 
+                margin-top 8px
+                
+            &__title
+                margin-bottom 20px
+                
+            &__item ~ .b-form__item
+                margin-top 13px
+                
+            &__captcha
+                margin 19px 0 62px
+                @media only screen and (max-width: 1010px)
+                    margin-bottom 20px
+                @media only screen and (max-width: 400px)
+                    margin-bottom 0
+                .g-recaptcha
+                    > div
+                        transform scale(1.154)
+                        transform-origin 0 0
+                        
+                        @media only screen and (max-width: 950px)
+                            transform none
+
+                        
+                        @media only screen and (max-width: 400px)
+                            transform scale(.7)
+            &__submit
+                text-align center
+                .b-button
+                    width 173px
+
+.remodal
+    max-width 484px
+    padding 0 0 55px
+    border-radius 3px 
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.75);
+
+    &__title
+        background-color: #fcf9ef;
+        padding 53px 0 28px
+        margin-bottom 45px
+        border-bottom: 1px dashed #beb8af;
+    h1
+        font-size 30px
+        margin-bottom 4px
+    h3
+        font-size 16px
+        margin-bottom 0
+    &__title
+        border-radius 3px 3px 0 0
+        &--margin-bottom
+            margin-bottom 0
+    &__thank-you-massage
+        padding 66px 50px 0
+        h1
+            font-size 24px
+    &__inner
+        max-width 389px
+        margin 0 auto
+        padding-left 20px
+        padding-right 20px
+        &--sidewidth
+            max-width 100%
+    &__number-text
+        font-size 14px
+        text-align left
+        color #3b2f27
+        margin-bottom 25px
+    &__user-agreement
+        font-size 12px
+        color: #3f332a;
+        margin-bottom 30px
+    &__required-field
+        font-size 16px
+        color #c9423b
+        text-align left
+        margin-top -12px
+        margin-bottom 30px
+    &__input
+        width 100%
+        margin-bottom 15px !important
+        &--master
+            font-size 14px !important   
+            padding 0 15px !important
+            height 42px !important
+        &--date
+            flex 1 1 40%
+        &--time    
+            flex 1 1 58%
+            margin-left 12px !important
+        &--tel
+            margin-bottom: 5px !important;
+    &__textarea
+        width 100%
+        height 118px   
+        border: 1px solid #c6bdb6;
+        border-radius: 3px;
+        color: #7c6656;
+        margin-bottom 15px
+        font-size: 20px;
+        font-weight: 200;
+        padding 12px 25px 0
+    .remodal-confirm
+        width: 220px;
+        height: 51px;
+        color: #fef7ef;
+        font-family: "MullerFont" , sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.45px;
+        background-image: linear-gradient(to top, #c33a33 0%, #cd4740 100%);
+        border-radius 3px
+    .b-catalogue-thumb
+        &:hover
+            box-shadow none
+        &__body
+            flex-direction: column
+            border none
+            border-bottom 1px solid #bfbcb9
+            margin-bottom 24px
+        &__main
+            padding-right 15px
+            flex none
+            &:before
+                display none
+        &__aside
+            display none
+        &__content
+            text-align left
+        &__image
+            margin-bottom: 11px;
+        &__comments-count
+            display none 
+    &__input-wrap
+        display: flex
+    &__confirm
+        display flex
+        justify-content center
+        align-items center
+        input[type="text"]
+            flex 1
+            margin-right 13px
+            padding 0
+            text-align center
+            font-size 14px
+            height 42px
+            line-height 42px
+            
+        .b-button
+            flex 0 0 220px
+            max-width 220px
+            
+    &__hidden,&__hidden[type="text"]
+        display none
+        &.active,
+        &.active[type="text"]
+            display inline-block
+.remodal-close
+    top 11px
+    right 17px
+    left auto
+    &:before
+        color #4f3d32
+        font-family "Muller Ultra Light" !important
+        font-size 34px
+        font-weight 300
+        
+[data-remodal-id="modal-map"]
+    width 1056px
+    max-width 100%
+    padding 0 0 10px
+    height calc(100vh - 20px)
+    
+    .remodal-close
+        right auto
+        left 100%
+        @media only screen and (max-width: 1200px)
+            right 0
+            z-index 100
+            left auto
+            background-color rgba(0,0,0,.7)
+        &:before
+            color rgba(255,255,255,.61)
+            
+[data-remodal-id="modal-sorting"]
+    width 300px
+    max-width 100%
+    padding 40px 20px 20px 20px
+    
+    .b-button
+        height 40px
+        line-height 43px

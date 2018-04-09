@@ -1,0 +1,49 @@
+.b-lk-menu
+    flex none
+    margin-bottom 76px
+    @media only screen and (max-width: 560px)
+        border-bottom none
+    @media only screen and (max-width: 900px)
+        margin-bottom 20px
+
+    &__content
+        background-color #f9f2de
+        background-clip content-box
+        position relative
+        @media only screen and (max-width: 560px)
+            padding-left 0
+            padding-right 0
+
+        &:before, &:after
+            content ''
+            display block
+            border-top 1px solid #f9f2de
+    &__items
+        display flex
+        align-items center
+        padding 0 1px
+        @media only screen and (max-width: 560px)
+            display block
+            padding 0
+    &__item 
+        display flex
+        align-items center
+        padding 0 10px
+        font-size 14px
+        line-height 14px
+        color #4f3d32
+        height 39px
+        @media only screen and (max-width: 560px)
+            padding-left 20px
+            padding-right 20px
+            border-bottom 1px solid #cac2bd
+
+        img 
+            margin-right 5px
+        &:hover
+            color #4f3d32
+            text-decoration none
+        &:hover,
+        &.active
+            background-color #fff
+        

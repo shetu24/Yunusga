@@ -1,0 +1,94 @@
+= yaml =
+pageTitle: ЛК. Заявки клиентов
+bodyMods: 'lk'
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: 'b-container'
+asideLeft: false
+asideRight: false
+
+layout: !!map
+    header : true
+    footer : true
+    left : false
+    right : false
+
+lk : true
+lkMenuActiveIndex : 2
+
+crumbsKey : innerPage
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+
+    <div block="b-lk-table" mods="applications">
+        <h1 elem="header">Заявки клиентов</h1>
+
+        <div elem="balance">баланс: <span elem="balance-num">-450 руб</span></div><!-- e:balance -->
+        <div elem="scroller">
+            <table class="table2">
+                <tbody>
+                    <tr>
+                        <th class="talbe2-nomer">№</th>
+                        <th><a class="b-lk-table__sort-param b-lk-table__sort-param--asc" href="#"><span>Мастер</span> <icon name="sort-angle" tag="span"></a></th>
+                        <th><a class="b-lk-table__sort-param" href="#">Услуга</a></th>
+                        <th><a class="b-lk-table__sort-param b-lk-table__sort-param--asc" href="#"><span>Дата<br>заявки</span> <icon name="sort-angle" tag="span"></a></th>
+                        <th><a class="b-lk-table__sort-param b-lk-table__sort-param--asc" href="#">Дата<br>выезда <icon name="sort-angle" tag="span"></a></th>
+                        <th><a class="b-lk-table__sort-param b-lk-table__sort-param--asc" href="#"><span>Статус</span> <icon name="sort-angle" tag="span"></a></th>
+                        <th><a class="b-lk-table__sort-param" href="#"><span>Отзыв</span></a></th>
+                        <th><a class="b-lk-table__sort-param" href="#"><span>Цена заявки,<br>руб</span></a></th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="#">Тамачев Виктор Генадьевич</a></td>
+                        <td>Замена насоса</td>
+                        <td>22.01.18</td>
+                        <td>25.01.18</td>
+                        
+                        <td>Ожидание выезда</td>
+                        <td><a class="b-lk-table__review" href="#">Смотреть отзыв</a></td>
+                        <td>450</td>
+                    </tr>
+                    <tr class="b-lk-table__active">
+                        <td>2</td>
+                        <td><a href="#">Тамачев Виктор Генадьевич</a></td>
+                        <td>Чистка бойлера</td>
+                        <td>22.01.18</td>
+                        <td>25.01.18</td>
+                        
+                        <td>Выезд совершен</td>
+                        <td><a class="b-lk-table__review" href="#">Смотреть отзыв</a></td>
+                        <td>450</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><a href="#">Тамачев Виктор Генадьевич</a></td>
+                        <td>Замена насоса</td>
+                        <td>22.01.18</td>
+                        <td>25.01.18</td>
+                        
+                        <td>Ожидание выезда</td>
+                        <td><a class="b-lk-table__review" href="#">Смотреть отзыв</a></td>
+                        <td>450</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><a href="#">Тамачев Виктор Генадьевич</a></td>
+                        <td>Чистка бойлера</td>
+                        <td>22.01.18</td>
+                        <td>25.01.18</td>
+                        
+                        <td>Ожидание выезда</td>
+                        <td><a class="b-lk-table__review" href="#">Смотреть отзыв</a></td>
+                        <td>450</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!-- e:scroller -->
+
+        {% include "pager.html" %}
+    </div><!-- b:lk-table -->
+
+{% endblock %}

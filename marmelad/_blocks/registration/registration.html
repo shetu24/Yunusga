@@ -1,0 +1,89 @@
+<div block="b-registration">
+
+    <div elem="content" mix="block:b-container">
+        <h1 elem="header">Получайте новых клиентов от ГазПросто</h1><!-- e:header -->
+        <div elem="text">Зарегистрируйтесь на нашем портале и начните получать дополнительный поток клиентов<br>от единого по России сервиса по поиску специалистов по<br>ремонту газового оборудования.</div><!-- e:text -->
+    </div><!-- e:cotacontent -->
+
+    <div elem="columns">
+        <div elem="aside">
+            <div elem="header" class="h2">Регистрация</div><!-- e:header -->
+            <form block="b-form" mods="vertical">
+                <div elem="inputs">
+                    <div elem="radios">
+                        <div elem="title">Кого вы представляете? *</div>
+                        <div elem="radio"><input checked name="rd1" type="radio" id="rd1"> <label for="rd1">Мастера</label></div><!-- e:radio -->
+                        <div elem="radio"><input name="rd1" type="radio" id="rd2"> <label for="rd2">Компанию</label></div><!-- e:radio -->
+                    </div><!-- e:radios -->
+
+                    <div elem="item">
+                        <input type="text" placeholder="Название компании">
+                    </div><!-- e:item -->
+
+                    <div elem="item">
+                        <input required type="text" placeholder="Ваше имя *">
+                    </div><!-- e:item -->
+
+                    <div elem="item">
+                        <input required type="text" placeholder="Город *">
+                    </div><!-- e:item -->
+
+                    <div elem="item">
+                        <input required type="tel" placeholder="Телефон*">
+                    </div><!-- e:item -->
+
+                    <div elem="item">
+                        <input required type="email" placeholder="Электронная почта">
+                    </div><!-- e:item -->
+                </div><!-- e:inputs -->
+
+                <div elem="captcha">
+                    <script src='//www.google.com/recaptcha/api.js'></script>
+                    <div class="g-recaptcha" data-sitekey="6Lf8FE8UAAAAAKdje61qWPkfdot6hwVvAj9sGIT-"></div>
+                </div><!-- e:captcha -->
+
+                <div elem="submit">
+                    <button block="b-button" type="submit">Отправить</button>
+                </div><!-- e:submit -->
+            </form><!-- b:b-form -->
+        </div><!-- e:aside -->
+        <div elem="main">
+            <div elem="logo">
+                {% set l_number = 4 %}
+                {% include "logo.html" %}
+            </div><!-- e:logo -->
+
+            <div elem="tabs">
+                <div elem="header" class="h2">Что мы предлагаем?</div><!-- e:header -->
+
+                <div elem="tabs-bodys">
+                    <div elem="tab-body" data-tab-index="0" class="active">
+                        <div elem="tab-body-title">Много клиентов</div><!-- e:tab-title -->
+
+                        <p>Клиенты от ГазПросто обходятся в 2-5 раз дешевле по сравнению с другими каналами маркетинга.</p>
+                    </div><!-- e:tab-body -->
+
+                    <div elem="tab-body" data-tab-index="1">
+                        <div elem="tab-body-title">Низкая стоимость привлечения</div><!-- e:tab-title -->
+
+                        <p>Клиенты от ГазПросто обходятся в 2-5 раз дешевле по сравнению с другими каналами маркетинга.</p>
+                    </div><!-- e:tab-body -->
+
+                    <div elem="tab-body" data-tab-index="2">
+                        <div elem="tab-body-title">Низкая стоимость</div><!-- e:tab-title -->
+
+                        <p>Клиенты от ГазПросто обходятся в 2-5 раз дешевле по сравнению с другими каналами маркетинга.</p>
+                    </div><!-- e:tab-body -->
+                </div><!-- e:tabs-bodys -->
+
+
+                <div elem="tabs-titles">
+                    <a href="#" elem="tabs-title" data-tab-index="0" mods="0">Много клиентов</a><!-- e:tabs-title -->
+                    <a href="#" elem="tabs-title" data-tab-index="1" mods="1">Низкая стоимость привлечения</a><!-- e:tabs-title -->
+                    <a href="#" elem="tabs-title" data-tab-index="2" mods="2">Оплата за результат</a><!-- e:tabs-title -->
+
+                    <div elem="tabs-pointer"></div><!-- e:tabs-titles-pointer -->
+                </div><!-- e:tabs-titles -->
+        </div><!-- e:main -->
+    </div><!-- e:content -->
+</div><!-- b:b-registration -->

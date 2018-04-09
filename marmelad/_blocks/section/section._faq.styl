@@ -1,0 +1,133 @@
+.b-section
+    &--faq
+        border-bottom 1px dotted rgba(160,151,144,.6)
+.b-faq
+    &__inner 
+        padding 75px 0 36px
+        width 970px
+        max-width 100%
+        margin 0 auto
+        @media only screen and (max-width: 767px)
+            padding 155px 0 25px
+            width auto
+            position relative
+
+    &__items 
+        padding 25px 30px 0 300px
+        position relative
+        @media only screen and (max-width: 767px)
+            position static
+            padding-left 0
+            padding-top 30px
+
+    &__items:before 
+        position absolute
+        left 40px
+        top 28px
+        background url(../img/faq-pic.png) no-repeat 0 0
+        content ''
+        width 258px
+        height 203px
+        @media only screen and (max-width: 767px)
+            top 40px
+            width 100px
+            height 102px
+            margin-left -50px
+            left 50%
+            background-size 100% auto
+
+    &__item 
+        color #302721
+        font-size 24px
+        font-weight: $fontWeight.ultra
+        padding-left 38px
+        position relative
+        padding-bottom 30px
+        
+        @media only screen and (max-width: 767px)
+            font-size 20px
+            padding-left 25px
+            padding-bottom 20px
+
+    &__item:last-child 
+        margin-bottom 0
+
+    &__item
+        .fa
+            position absolute
+            left 0
+            top 14px
+            font-size 18px
+            color #566590
+            line-height 0
+            transition transform 0.2s linear 0s
+            @media only screen and (max-width: 767px)
+                font-size 15px
+
+
+    &__item > span 
+        display block
+        padding-bottom 10px
+        font-size 26px
+        cursor pointer
+        user-select none
+        
+        @media only screen and (max-width: 767px)
+            font-size 20px
+        
+    &__item:hover > span 
+        color #566590
+
+    &__item.active > span 
+        color #cc453e !important
+
+    &__item.active .fa
+        color #cc453e
+        transform scaleY(-1)
+
+    &__item.active &__text 
+        display block
+
+    &__text 
+        display none
+        font-size 18px
+        line-height 21px
+
+.b-section
+    &--top-padding
+        padding-top 60px
+        
+    &--faq-page
+        border-bottom 0
+        
+        .b-faq
+            &__inner
+                padding-top 6px
+                
+                .h1
+                    font-size 20px
+                    text-align left
+                    margin-bottom 0.6em
+
+            &__items
+                padding-left 0
+
+                &:before
+                    content none
+                
+            &__item 
+                padding-bottom 15px
+
+                .fa
+                    top 10px
+
+                & > span
+                    font-size 18px
+                    
+                    
+            
+            &__text
+                font-size 16px
+    
+    &--bottom-border
+        border-bottom 1px dotted rgba(160,151,144,0.6)

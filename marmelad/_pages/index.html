@@ -1,0 +1,32 @@
+= yaml =
+pageTitle: Главная страница
+bodyMods: home
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: ''
+asideLeft: false
+asideRight: false
+
+
+layout: !!map
+    header : true
+    footer : true
+    left : false
+    right : false
+
+crumbsKey : ''
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+    {% include "section._intro.html" %}
+    {% include "section._benefits.html" %}
+    {% include "section._counters.html" %}
+    {% include "section._apps.html" %}
+    {% include "section._contract.html" %}
+    {% include "section._faq.html" %}
+    {% include "section._services.html" %}
+    {% include "section._brands.html" %}
+    {% include "section._help.html" %}
+{% endblock %}

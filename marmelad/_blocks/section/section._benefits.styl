@@ -1,0 +1,215 @@
+.b-section
+    &--benefits
+        border-bottom 1px dotted rgba(160,151,144,.6)
+
+.b-benefits
+
+    &__mobile 
+        display none
+        font-size 18px
+        padding 25px 0 8px
+        
+        @media only screen and (max-width: 767px)
+            display block
+            
+    &__mobile-header
+        margin-bottom 25px
+        @media only screen and (max-width: 767px)
+            margin-bottom 27px
+
+    &__mobile-item 
+        position relative
+        padding-bottom 20px
+
+    &__mobile-item:before 
+        position absolute
+        left 0
+        top 0
+        content ''
+        background-size cover
+        background-position 0 0
+        background-repeat no-repeat
+
+    &__mobile-title 
+        font-weight bold
+        color #000
+
+    &__mobile-text 
+        padding-top 8px
+        line-height 16px
+        color #828288
+        font-size 14px
+
+    &__inner 
+        padding 85px 0 88px
+        
+        @media only screen and (max-width: 767px)
+            display none
+
+    &__tabs 
+        padding 57px 0 0
+        max-width 730px
+        margin 0 auto
+        width 100%
+
+    &__buttons 
+        text-align center
+        border-bottom 1px solid #ccc
+        display table
+        width 100%
+        table-layout fixed
+
+    &__button 
+        display table-cell
+        vertical-align bottom
+        text-align center
+
+    &__button:first-child 
+        text-align left
+
+    &__button:last-child 
+        text-align right
+
+    &__button a 
+        position relative
+        top 1px
+        font-size 20px
+        line-height 20px
+        font-weight: $fontWeight.ultra
+        display inline-block
+        padding-bottom 24px
+        color #566590
+
+    &__button a.active 
+        color #352f2b
+        padding-bottom 19px
+        border-bottom 5px solid #ca433c
+
+    &__button a:hover 
+        color #352f2b
+        text-decoration none
+
+    &__content 
+        padding-top 30px
+
+    &__img 
+        width 304px
+        margin 0 auto
+
+    &__img img 
+        display block
+        margin 0 auto
+        max-width 100%
+
+    &__tab 
+        position relative
+        display none
+
+    &__tab.active 
+        display block
+
+    &__note 
+        position absolute
+        font-size 16px
+        color #3c2e25
+        width 140px
+        font-weight: $fontWeight.regular
+        padding 6px 15px 6px 0
+        border-right 12px solid #ca433c
+        text-align right
+
+    &__note:before 
+        position absolute
+        content ''
+
+    &__note--1
+        bottom 70px
+        left -10px
+        width 185px
+
+    &__note--1:before
+        left 100%
+        top 22px
+        margin-left 25px
+        height 19px
+        width 115px
+        background url(../img/benefits-arrow1.png) center center no-repeat
+
+    &__note--2 
+        text-align left
+        padding-left 15px
+        padding-right 0
+        top 104px
+        right 0
+        width 200px
+        border-left 12px solid #ca433c
+        border-right none
+
+    &__note--2:before 
+        left -150px
+        height 46px
+        width 117px
+        background url(../img/benefits-arrow2.png) center center no-repeat
+
+    &__note--3 
+        top 39px
+        left -12px
+        width 176px
+
+    &__note--3:before 
+        top 19px
+        left 100%
+        margin-left 25px
+        height 19px
+        width 115px
+        background url(../img/benefits-arrow1.png) center center no-repeat
+
+    &__note--4 
+        text-align left
+        padding-left 15px
+        padding-right 0
+        bottom 112px
+        width 198px
+        right 10px
+        border-left 12px solid #ca433c
+        border-right none
+
+    &__note--4:before 
+        right 100%
+        margin-right 30px
+        top 13px
+        height 46px
+        width 117px
+        background url(../img/benefits-arrow2.png) center center no-repeat
+
+    &__note--5 
+        top 40px
+        left 8px
+        width 190px
+
+    &__note--5:before
+        top 50px
+        left 100%
+        margin-left 25px
+        height 51px
+        width 147px
+        background url(../img/benefits-arrow3.png) center center no-repeat
+
+    &__note--6 
+        text-align left
+        padding-left 15px
+        padding-right 0
+        bottom 52px
+        right -20px
+        width 223px
+        border-left 12px solid #ca433c
+        border-right none
+
+    &__note--6:before 
+        top 13px
+        right 100%
+        margin-right 25px
+        height 46px
+        width 117px
+        background url(../img/benefits-arrow4.png) center center no-repeat
+        

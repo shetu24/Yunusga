@@ -1,0 +1,47 @@
+= yaml =
+pageTitle: Контакты
+bodyMods: wright
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: ''
+asideLeft: false
+asideRight: false
+
+layout: !!map
+    header : true
+    footer : true
+    left : false
+    right : false
+
+crumbsKey : contacts
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+	{% include 'map.html' %}
+	<div block="b-section" mods="text">
+        <div block="b-section-text" class="b-section__container" mix="block:b-container">
+            <div elem="inner">
+                <div class="b-section__header h1">Оставайтесь на связи</div>
+
+                <div elem="content" class="text-center">
+                    GazProsto.ru — это единый сервис подбора специалистов по ремонту газового оборудования. Мы стремимся помочь людям оперативно найти надежного мастера для вашего уюта и комфорта.<br><br>Телефоны нашего колл-центра:<br>— 8 (800) 302-20-06<br>(Поддержка пользователей 7 дней в неделю с 8:00 по 21:00)
+                </div><!-- e:content -->
+            </div><!-- e:header -->
+        </div>
+    </div>
+    <div block="b-section" mods="wright">
+    <div block="b-wright" class="b-section__container" mix="block:b-container">
+        <div elem="inner">
+            <div class="b-section__header h1">Пишите нам</div>
+
+            <div elem="content">
+            	<span elem="content-item"><span>Тех. проблемы, пожелания, предложения:</span><span><a href="info@gazprosto.ru">info@gazprosto.ru</a></span></span>
+            	<span elem="content-item"><span>Вопросы по сотрудничеству:</span><span><a href="partner@gazprosto.ru">partner@gazprosto.ru</a></span></span>
+            	<span elem="content-item"><span>Для СМИ:</span><span><a href="press@gazprosto.ru">press@gazprosto.ru</a></span></span>
+			</div><!-- e:content -->
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,134 @@
+.b-section
+    &--counters
+        border-bottom 1px dotted rgba(160,151,144,.6)
+
+.b-counters
+    &__inner 
+        padding 82px 0 90px
+        @media only screen and (max-width: 767px)
+            position relative
+            padding 145px 0 55px
+
+            &:before
+                position absolute
+                width 88px
+                height 81px
+                background url(../img/home-with-gaz.png) no-repeat 0 0
+                background-size cover
+                top 40px
+                left 50%
+                margin-left -44px
+                content ''
+
+    &__items 
+        padding 75px 0 0
+        @media only screen and (max-width: 767px)
+            padding-top 35px
+
+    &__main 
+        width 667px
+        margin 0 auto
+        color #302721
+        display flex
+        justify-content flex-end
+        font-size 18px
+        line-height 26px
+        font-weight: $fontWeight.ultra
+        padding 33px 0 20px 240px
+        background url(../img/home-with-gaz.png) no-repeat 0 0
+        
+        @media only screen and (max-width: 767px)
+            background none
+            padding-left 0
+            padding-bottom 0
+            padding-top 0
+            text-align center
+            justify-content center
+            width 100%
+            font-size 20px
+            line-height 22px
+
+    &__allready 
+        text-align right
+        letter-spacing 0.75px
+        font-size 30px
+        font-weight: $fontWeight.bold
+        color #3d2f26
+        margin-bottom -6px
+        @media only screen and (max-width: 767px)
+            text-align center
+            font-weight bold
+            font-size 25px
+            margin-bottom 10px
+
+    &__value 
+        white-space nowrap
+        
+        color #7c6656
+        
+        line-height 46px
+        font-size 46px
+        font-weight bold
+        font-family: $fonts.helios
+        
+        flex-shrink 0
+        margin-right 8px
+        position relative
+        top -4px
+        
+        @media only screen and (max-width: 767px)
+            font-size 35px
+            line-height 30px
+            padding-bottom 3px
+            margin-right 0
+
+        &--red 
+            padding 0
+            color #ca443d
+            line-height 92px
+            font-size 92px
+            font-weight 400
+            letter-spacing 1.5px
+            margin-right 0
+            top 0
+            
+            @media only screen and (max-width: 767px)
+                font-size 46px
+                padding-bottom 0
+                line-height 55px
+                margin-left 10px
+
+    &__cols 
+        padding 33px 0 0
+        display flex 
+        margin 0 auto
+        @media only screen and (max-width: 767px)
+            padding-top 40px
+
+    &__col 
+        flex 0 0 33.33%
+        max-width 33.33%
+        padding 0 20px
+        @media only screen and (max-width: 767px)
+            padding 0 5px
+        
+    &__col:nth-child(2) 
+        text-align center
+
+    &__col:last-child 
+        text-align right
+
+    &__cell 
+        display flex
+        text-align left
+        font-size 18px
+        line-height 19px
+        padding-top 4px
+        font-weight: $fontWeight.regular
+        color #302721
+        @media only screen and (max-width: 767px)
+            display block
+            text-align center
+            width auto
+            font-size 15px
+            line-height 16px
